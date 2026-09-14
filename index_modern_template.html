@@ -110,35 +110,42 @@
                 Des artisans, commerçants et spécialistes qualifiés, immédiatement joignables par appel direct ou WhatsApp.
             </p>
         </div>
-
+        
         <!-- Filter & Search Bar -->
         <div class="filter-search-container animate-on-scroll stagger-1">
             <div class="search-bar-wrapper">
                 <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-                <input type="text" id="workerSearch" class="search-input" placeholder="Rechercher par nom, métier ou activité (ex: Plombier, Ablaye, Électricien, Astar Shop...)" aria-label="Rechercher un professionnel">
+                <input type="text" id="workerSearch" class="search-input" placeholder="Rechercher par nom, métier ou activité (ex: Plombier, Ablaye, Électricien, Boutique...)" aria-label="Rechercher un professionnel">
             </div>
-
+            
             <div class="tab-buttons" role="tablist" aria-label="Filtrer par catégorie">
                 <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">
-                    Tous <span class="badge-count">31</span>
+                    Tous <span class="badge-count">28</span>
                 </button>
                 <button class="tab-btn" data-filter="btp" role="tab" aria-selected="false">
-                    <i class="fa-solid fa-hammer"></i> Bâtiment & BTP <span class="badge-count">12</span>
+                    <i class="fa-solid fa-hammer"></i> Bâtiment & BTP
                 </button>
                 <button class="tab-btn" data-filter="livraison" role="tab" aria-selected="false">
-                    <i class="fa-solid fa-motorcycle"></i> Livraison <span class="badge-count">2</span>
+                    <i class="fa-solid fa-motorcycle"></i> Livraison
                 </button>
                 <button class="tab-btn" data-filter="commerce" role="tab" aria-selected="false">
-                    <i class="fa-solid fa-shop"></i> Commerce <span class="badge-count">10</span>
+                    <i class="fa-solid fa-shop"></i> Commerce
                 </button>
                 <button class="tab-btn" data-filter="services" role="tab" aria-selected="false">
-                    <i class="fa-solid fa-handshake-angle"></i> Services & Divers <span class="badge-count">7</span>
+                    <i class="fa-solid fa-handshake-angle"></i> Services & Divers
                 </button>
             </div>
         </div>
-
+        
         <!-- Workers Grid -->
         <div class="workers-grid" id="workersGrid">
+            <!-- No Results Warning -->
+            <div class="no-results" id="noResults">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h4>Aucun résultat correspondant</h4>
+                <p>Aucun professionnel ne correspond à votre recherche. Essayez un autre mot-clé ou appelez la direction.</p>
+            </div>
+
             <!-- Worker 1: Ablaye Diallo -->
             <div class="worker-card animate-on-scroll stagger-1" data-category="btp">
                 <div class="worker-card-cover">
@@ -148,32 +155,32 @@
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
                         <div class="worker-avatar ouvrier">
-                            <i class="fa-solid fa-person-digging"></i>
+                            <i class="fa-solid fa-helmet-safety"></i>
                         </div>
                         <span class="avatar-live-indicator" title="Disponible"></span>
                     </div>
                     <h3>Ablaye Diallo</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Ouvrier BTP</span>
+                        <span class="worker-job-badge">Ouvrier BTP / Maçon</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Maçonnerie générale</span>
-                        <span class="specialty-chip">Fondations & Dalles</span>
-                        <span class="specialty-chip">Chantiers & Rénovation</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-trowel"></i> Maçonnerie générale</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-cubes"></i> Fondations & Dalles</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-paint-roller"></i> Rénovation</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Réponse rapide</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221778365231" class="btn-primary-call" onclick="showToast('Appel à Ablaye Diallo...')">
-                            <i class="fa-solid fa-phone"></i> 77 836 52 31
+                        <a href="tel:+221771223629" class="btn-primary-call" onclick="showToast('Appel à Ablaye Diallo...')">
+                            <i class="fa-solid fa-phone"></i> 77 122 36 29
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('778365231')" title="Copier le numéro" aria-label="Copier le numéro de Ablaye Diallo">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221771223629')" title="Copier le numéro" aria-label="Copier le numéro de Ablaye Diallo">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221778365231?text=Bonjour%20Ablaye%20Diallo,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221771223629?text=Bonjour%20Ablaye%20Diallo,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
@@ -183,38 +190,38 @@
             <!-- Worker 2: Aly Dieng -->
             <div class="worker-card animate-on-scroll stagger-2" data-category="btp">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Bois</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-tree"></i> Bâtiment & BTP</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
                         <div class="worker-avatar menuisier">
-                            <i class="fa-solid fa-hammer"></i>
+                            <i class="fa-solid fa-tree"></i>
                         </div>
                         <span class="avatar-live-indicator" title="Disponible"></span>
                     </div>
                     <h3>Aly Dieng</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Menuisier</span>
+                        <span class="worker-job-badge">Menuisier Bois</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Portes & Fenêtres</span>
-                        <span class="specialty-chip">Meubles & Placards</span>
-                        <span class="specialty-chip">Réparations bois</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-door-open"></i> Portes & Fenêtres</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-couch"></i> Meubles & Placards</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-hammer"></i> Réparations bois</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Devis sur mesure</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221775448213" class="btn-primary-call" onclick="showToast('Appel à Aly Dieng...')">
-                            <i class="fa-solid fa-phone"></i> 77 544 82 13
+                        <a href="tel:+221775612438" class="btn-primary-call" onclick="showToast('Appel à Aly Dieng...')">
+                            <i class="fa-solid fa-phone"></i> 77 561 24 38
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775448213')" title="Copier le numéro" aria-label="Copier le numéro de Aly Dieng">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221775612438')" title="Copier le numéro" aria-label="Copier le numéro de Aly Dieng">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221775448213?text=Bonjour%20Aly%20Dieng,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221775612438?text=Bonjour%20Aly%20Dieng,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
@@ -224,46 +231,87 @@
             <!-- Worker 3: Ada Fam -->
             <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Matériaux</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-tree"></i> Bâtiment & BTP</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar construction">
-                            <i class="fa-solid fa-building"></i>
+                        <div class="worker-avatar menuisier">
+                            <i class="fa-solid fa-tree"></i>
                         </div>
                         <span class="avatar-live-indicator" title="Disponible"></span>
                     </div>
                     <h3>Ada Fam</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">BTP & Quincaillerie</span>
+                        <span class="worker-job-badge">Menuisier Bois</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Matériaux BTP</span>
-                        <span class="specialty-chip">Quincaillerie générale</span>
-                        <span class="specialty-chip">Fournitures chantier</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-chair"></i> Mobilier & Salons</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-boxes-stacked"></i> Dressings & Cuisines</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-screwdriver-wrench"></i> Pose & Finitions</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Travail soigné</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221775276967" class="btn-primary-call" onclick="showToast('Appel à Ada Fam...')">
-                            <i class="fa-solid fa-phone"></i> 77 527 69 67
+                        <a href="tel:+221771720592" class="btn-primary-call" onclick="showToast('Appel à Ada Fam...')">
+                            <i class="fa-solid fa-phone"></i> 77 172 05 92
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775276967')" title="Copier le numéro" aria-label="Copier le numéro de Ada Fam">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221771720592')" title="Copier le numéro" aria-label="Copier le numéro de Ada Fam">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221775276967?text=Bonjour%20Ada%20Fam,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221771720592?text=Bonjour%20Ada%20Fam,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 4: Amadou -->
-            <div class="worker-card animate-on-scroll stagger-4" data-category="livraison">
+            <!-- Worker 4: Laye -->
+            <div class="worker-card animate-on-scroll stagger-4" data-category="btp">
+                <div class="worker-card-cover">
+                    <span class="card-cat-badge"><i class="fa-solid fa-person-digging"></i> Bâtiment & BTP</span>
+                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
+                </div>
+                <div class="worker-card-body">
+                    <div class="worker-avatar-wrap">
+                        <div class="worker-avatar construction">
+                            <i class="fa-solid fa-person-digging"></i>
+                        </div>
+                        <span class="avatar-live-indicator" title="Disponible"></span>
+                    </div>
+                    <h3>Laye</h3>
+                    <div class="worker-role-line">
+                        <span class="worker-job-badge">Chef de Chantier BTP</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                    </div>
+                    <div class="worker-specialties-list">
+                        <span class="specialty-chip"><i class="fa-solid fa-clipboard-check"></i> Conduite de travaux</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-compass-drafting"></i> Coordination corps d'état</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-calculator"></i> Estimations & Devis</span>
+                    </div>
+                    <div class="worker-trust-strip">
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Suivi rigoureux</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="tel:+221771768397" class="btn-primary-call" onclick="showToast('Appel à Laye...')">
+                            <i class="fa-solid fa-phone"></i> 77 176 83 97
+                        </a>
+                        <button class="copy-phone-btn" onclick="copyPhone('+221771768397')" title="Copier le numéro" aria-label="Copier le numéro de Laye">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <a href="https://wa.me/221771768397?text=Bonjour%20Laye,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worker 5: Sidy -->
+            <div class="worker-card animate-on-scroll stagger-5" data-category="livraison">
                 <div class="worker-card-cover">
                     <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
@@ -273,78 +321,37 @@
                         <div class="worker-avatar livreur">
                             <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Amadou</h3>
+                    <h3>Sidy</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Livreur</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Courses express</span>
-                        <span class="specialty-chip">Colis & Marché</span>
-                        <span class="specialty-chip">Quartier 10e & Thiès</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-box"></i> Colis & Plis rapides</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-basket-shopping"></i> Courses marché</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-stopwatch"></i> Délai garanti</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Départ immédiat</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221773399144" class="btn-primary-call" onclick="showToast('Appel à Amadou...')">
-                            <i class="fa-solid fa-phone"></i> 77 339 91 44
+                        <a href="tel:+221771653781" class="btn-primary-call" onclick="showToast('Appel à Sidy...')">
+                            <i class="fa-solid fa-phone"></i> 77 165 37 81
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('773399144')" title="Copier le numéro" aria-label="Copier le numéro de Amadou">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221771653781')" title="Copier le numéro" aria-label="Copier le numéro de Sidy">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221773399144?text=Bonjour%20Amadou,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221771653781?text=Bonjour%20Sidy,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 5: Agence Immobilier -->
-            <div class="worker-card animate-on-scroll stagger-5" data-category="commerce">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Commerces & Immobilier</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar immobilier">
-                            <i class="fa-solid fa-house-chimney"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Agence Immobilier</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Immobilier</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Terrains titrés</span>
-                        <span class="specialty-chip">Locations & Ventes</span>
-                        <span class="specialty-chip">Gestion de biens</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221774023079" class="btn-primary-call" onclick="showToast('Appel à Agence Immobilier...')">
-                            <i class="fa-solid fa-phone"></i> 77 402 30 79
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('774023079')" title="Copier le numéro" aria-label="Copier le numéro de Agence Immobilier">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221774023079?text=Bonjour%20Agence%20Immobilier,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 6: Moussa Jakarta -->
+            <!-- Worker 6: Tapha -->
             <div class="worker-card animate-on-scroll stagger-6" data-category="livraison">
                 <div class="worker-card-cover">
                     <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
@@ -355,491 +362,287 @@
                         <div class="worker-avatar livreur">
                             <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Moussa Jakarta</h3>
+                    <h3>Tapha</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Livreur</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Courses Jakarta</span>
-                        <span class="specialty-chip">Colis urgents</span>
-                        <span class="specialty-chip">Disponibilité 7j/7</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-capsules"></i> Médicaments express</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-burger"></i> Repas & Restauration</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-route"></i> Thiès centre & périphérie</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Réactif</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221773500665" class="btn-primary-call" onclick="showToast('Appel à Moussa Jakarta...')">
-                            <i class="fa-solid fa-phone"></i> 77 350 06 65
+                        <a href="tel:+221781747497" class="btn-primary-call" onclick="showToast('Appel à Tapha...')">
+                            <i class="fa-solid fa-phone"></i> 78 174 74 97
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('773500665')" title="Copier le numéro" aria-label="Copier le numéro de Moussa Jakarta">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221781747497')" title="Copier le numéro" aria-label="Copier le numéro de Tapha">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221773500665?text=Bonjour%20Moussa%20Jakarta,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221781747497?text=Bonjour%20Tapha,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 7: BARA -->
-            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
+            <!-- Worker 7: Mara -->
+            <div class="worker-card animate-on-scroll stagger-7" data-category="livraison">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Commerces & Eau</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar eau">
-                            <i class="fa-solid fa-droplet"></i>
+                        <div class="worker-avatar livreur">
+                            <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>BARA</h3>
+                    <h3>Mara</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Eau Filtrée</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Eau filtrée pure</span>
-                        <span class="specialty-chip">Bonbonnes & Packs</span>
-                        <span class="specialty-chip">Livraison à domicile</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-envelope-open-text"></i> Documents & Plis</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-cart-shopping"></i> Achats en boutique</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-shield-halved"></i> Livraison soignée</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Ponctuel</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221771420481" class="btn-primary-call" onclick="showToast('Appel à BARA...')">
-                            <i class="fa-solid fa-phone"></i> 77 142 04 81
+                        <a href="tel:+221777510420" class="btn-primary-call" onclick="showToast('Appel à Mara...')">
+                            <i class="fa-solid fa-phone"></i> 77 751 04 20
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('771420481')" title="Copier le numéro" aria-label="Copier le numéro de BARA">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221777510420')" title="Copier le numéro" aria-label="Copier le numéro de Mara">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221771420481?text=Bonjour%20BARA,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221777510420?text=Bonjour%20Mara,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 8: Bocar Diallo -->
-            <div class="worker-card animate-on-scroll stagger-2" data-category="services">
+            <!-- Worker 8: Mbaye -->
+            <div class="worker-card animate-on-scroll stagger-1" data-category="livraison">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-handshake-angle"></i> Services & Enseignement</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar oustaz">
-                            <i class="fa-solid fa-book-quran"></i>
+                        <div class="worker-avatar livreur">
+                            <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Bocar Diallo</h3>
+                    <h3>Mbaye</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Oustaz à Domicile</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Éducation coranique</span>
-                        <span class="specialty-chip">Enseignement islamique</span>
-                        <span class="specialty-chip">Cours à domicile</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-bag-shopping"></i> Colis & Bagages</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-motorcycle"></i> Trajets rapides</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-clock"></i> Service jour & nuit</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Disponible 7j/7</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221784000801" class="btn-primary-call" onclick="showToast('Appel à Bocar Diallo...')">
-                            <i class="fa-solid fa-phone"></i> 78 400 08 01
+                        <a href="tel:+221778263111" class="btn-primary-call" onclick="showToast('Appel à Mbaye...')">
+                            <i class="fa-solid fa-phone"></i> 77 826 31 11
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('784000801')" title="Copier le numéro" aria-label="Copier le numéro de Bocar Diallo">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221778263111')" title="Copier le numéro" aria-label="Copier le numéro de Mbaye">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221784000801?text=Bonjour%20Bocar%20Diallo,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221778263111?text=Bonjour%20Mbaye,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 9: Kao Soulay -->
-            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
+            <!-- Worker 9: Modou -->
+            <div class="worker-card animate-on-scroll stagger-2" data-category="livraison">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Plomberie</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar plombier">
-                            <i class="fa-solid fa-faucet"></i>
+                        <div class="worker-avatar livreur">
+                            <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Kao Soulay</h3>
+                    <h3>Modou</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Plombier</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Réparation fuites</span>
-                        <span class="specialty-chip">Installations sanitaires</span>
-                        <span class="specialty-chip">Débouchage express</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-box-archive"></i> Commandes en gros</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-utensils"></i> Plats cuisinés</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-map-pin"></i> Thiès & alentours</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Trajet optimisé</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221770765473" class="btn-primary-call" onclick="showToast('Appel à Kao Soulay...')">
-                            <i class="fa-solid fa-phone"></i> 77 076 54 73
+                        <a href="tel:+221774821701" class="btn-primary-call" onclick="showToast('Appel à Modou...')">
+                            <i class="fa-solid fa-phone"></i> 77 482 17 01
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('770765473')" title="Copier le numéro" aria-label="Copier le numéro de Kao Soulay">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221774821701')" title="Copier le numéro" aria-label="Copier le numéro de Modou">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221770765473?text=Bonjour%20Kao%20Soulay,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221774821701?text=Bonjour%20Modou,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 10: Khadylaye -->
-            <div class="worker-card animate-on-scroll stagger-4" data-category="services">
+            <!-- Worker 10: Baye Fall -->
+            <div class="worker-card animate-on-scroll stagger-3" data-category="livraison">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-handshake-angle"></i> Services & Traiteur</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-motorcycle"></i> Livraison Express</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar traiteur">
-                            <i class="fa-solid fa-utensils"></i>
+                        <div class="worker-avatar livreur">
+                            <i class="fa-solid fa-motorcycle"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Khadylaye</h3>
+                    <h3>Baye Fall</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Traiteur</span>
+                        <span class="worker-job-badge">Livreur Moto Express</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Cuisine & Buffets</span>
-                        <span class="specialty-chip">Cérémonies & Fêtes</span>
-                        <span class="specialty-chip">Plats sénégalais & traiteur</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-heart-pulse"></i> Urgences santé</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-box"></i> Ravitaillement boutique</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-thumbs-up"></i> Confiance & discrétion</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Prise en charge rapide</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221772988075" class="btn-primary-call" onclick="showToast('Appel à Khadylaye...')">
-                            <i class="fa-solid fa-phone"></i> 77 298 80 75
+                        <a href="tel:+221774088148" class="btn-primary-call" onclick="showToast('Appel à Baye Fall...')">
+                            <i class="fa-solid fa-phone"></i> 77 408 81 48
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('772988075')" title="Copier le numéro" aria-label="Copier le numéro de Khadylaye">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221774088148')" title="Copier le numéro" aria-label="Copier le numéro de Baye Fall">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221772988075?text=Bonjour%20Khadylaye,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221774088148?text=Bonjour%20Baye%20Fall,%20je%20souhaite%20une%20livraison%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 11: Khalilou -->
-            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Électricité</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar electricien">
-                            <i class="fa-solid fa-bolt"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Khalilou</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Electricien</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Dépannage urgent</span>
-                        <span class="specialty-chip">Câblage & Tableaux</span>
-                        <span class="specialty-chip">Installation éclairage</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221773679313" class="btn-primary-call" onclick="showToast('Appel à Khalilou...')">
-                            <i class="fa-solid fa-phone"></i> 77 367 93 13
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('773679313')" title="Copier le numéro" aria-label="Copier le numéro de Khalilou">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221773679313?text=Bonjour%20Khalilou,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 12: Mamadou Ba -->
-            <div class="worker-card animate-on-scroll stagger-6" data-category="commerce">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Commerces & Bureautique</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar papaterie">
-                            <i class="fa-solid fa-print"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Mamadou Ba</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Papeterie & Impression</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Photocopies & Impressions</span>
-                        <span class="specialty-chip">Fournitures scolaires</span>
-                        <span class="specialty-chip">Reliures de documents</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221775175432" class="btn-primary-call" onclick="showToast('Appel à Mamadou Ba...')">
-                            <i class="fa-solid fa-phone"></i> 77 517 54 32
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775175432')" title="Copier le numéro" aria-label="Copier le numéro de Mamadou Ba">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221775175432?text=Bonjour%20Mamadou%20Ba,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 13: Mara Samb -->
-            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Commerces & Céréales</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar commercant">
-                            <i class="fa-solid fa-wheat-awn"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Mara Samb</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Commerçant (Mil, Maïs, Moulin)</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Mil & Maïs de qualité</span>
-                        <span class="specialty-chip">Service de moulin</span>
-                        <span class="specialty-chip">Vente gros & détail</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221775158090" class="btn-primary-call" onclick="showToast('Appel à Mara Samb...')">
-                            <i class="fa-solid fa-phone"></i> 77 515 80 90
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775158090')" title="Copier le numéro" aria-label="Copier le numéro de Mara Samb">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221775158090?text=Bonjour%20Mara%20Samb,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 14: Seydou Faye -->
-            <div class="worker-card animate-on-scroll stagger-2" data-category="btp">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Métal</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar menuisier-metal">
-                            <i class="fa-solid fa-wrench"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Seydou Faye</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Menuisier Métallique</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Portes & Portails fer</span>
-                        <span class="specialty-chip">Grilles de sécurité</span>
-                        <span class="specialty-chip">Soudure & Ferronnerie</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221775761799" class="btn-primary-call" onclick="showToast('Appel à Seydou Faye...')">
-                            <i class="fa-solid fa-phone"></i> 77 576 17 99
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775761799')" title="Copier le numéro" aria-label="Copier le numéro de Seydou Faye">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221775761799?text=Bonjour%20Seydou%20Faye,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 15: Laye -->
-            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-snowflake"></i> Froid & Climatisation</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar frigoriste">
-                            <i class="fa-solid fa-snowflake"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Laye</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Frigoriste</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Réparation réfrigérateurs</span>
-                        <span class="specialty-chip">Entretien climatiseurs</span>
-                        <span class="specialty-chip">Recharge gaz</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221775187352" class="btn-primary-call" onclick="showToast('Appel à Laye...')">
-                            <i class="fa-solid fa-phone"></i> 77 518 73 52
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775187352')" title="Copier le numéro" aria-label="Copier le numéro de Laye">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221775187352?text=Bonjour%20Laye,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 16: Diamal Oud (IMAGE a.jpeg) -->
+            <!-- Worker 11: Diamal Oud (WITH UNIFORM IMAGE a.jpeg) -->
             <div class="worker-card with-image animate-on-scroll stagger-4" data-category="commerce">
                 <div class="image-frame">
                     <img src="a.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
                     <img src="a.jpeg" alt="Diamal Oud" class="worker-image">
                     <span class="card-badge-pill"><i class="fa-solid fa-spray-can-sparkles"></i> Parfumerie</span>
-                    <button class="image-preview-btn" onclick="openLightbox('a.jpeg', 'Diamal Oud', 'Parfumerie', '+221775110304')" title="Agrandir l'image" aria-label="Agrandir la photo de Diamal Oud">
+                    <button class="image-preview-btn" onclick="openLightbox('a.jpeg', 'Diamal Oud', 'Parfumerie & Parfums d\'Orient', '+221775110304')" title="Agrandir l'image" aria-label="Agrandir la photo de Diamal Oud">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
                         <h3>Diamal Oud</h3>
-                        <span class="worker-job-pill">Parfumerie</span>
+                        <span class="worker-job-pill">Parfumerie de Luxe</span>
                     </div>
                     <div class="meta-chips-grid">
                         <span class="meta-chip"><i class="fa-brands fa-instagram" style="color: #E1306C;"></i> parfumeriediamaloud</span>
-                        <span class="meta-chip"><i class="fa-brands fa-snapchat" style="color: #EAB308;"></i> diamal_oud</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Thiès HLM 10e</span>
+                        <span class="meta-chip"><i class="fa-brands fa-snapchat" style="color: #ca8a04;"></i> diamal_oud</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> HLM 10e, Thiès</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Ouvert & Disponible</span>
                     </div>
                     <div class="worker-actions">
                         <a href="tel:+221775110304" class="btn-primary-call" onclick="showToast('Appel à Diamal Oud...')">
                             <i class="fa-solid fa-phone"></i> 77 511 03 04
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775110304')" title="Copier le numéro" aria-label="Copier le numéro de Diamal Oud">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221775110304')" title="Copier le numéro" aria-label="Copier le numéro de Diamal Oud">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221775110304?text=Bonjour%20Diamal%20Oud,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221775110304?text=Bonjour,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 17: Tima Boutique (IMAGE b.jpeg) -->
+            <!-- Worker 12: Tima Boutique (WITH UNIFORM IMAGE b.jpeg) -->
             <div class="worker-card with-image animate-on-scroll stagger-5" data-category="commerce">
                 <div class="image-frame">
                     <img src="b.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
                     <img src="b.jpeg" alt="Tima Boutique" class="worker-image">
-                    <span class="card-badge-pill"><i class="fa-solid fa-shirt"></i> Boutique & Mode</span>
-                    <button class="image-preview-btn" onclick="openLightbox('b.jpeg', 'Tima Boutique', 'Boutique', '+221774582546')" title="Agrandir l'image" aria-label="Agrandir la photo de Tima Boutique">
+                    <span class="card-badge-pill"><i class="fa-solid fa-bag-shopping"></i> Prêt-à-porter</span>
+                    <button class="image-preview-btn" onclick="openLightbox('b.jpeg', 'Tima Boutique', 'Boutique Mode & Accessoires', '+221774582546')" title="Agrandir l'image" aria-label="Agrandir la photo de Tima Boutique">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
                         <h3>Tima Boutique</h3>
-                        <span class="worker-job-pill">Boutique</span>
+                        <span class="worker-job-pill">Boutique & Mode</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-bag-shopping"></i> Mode & Prêt-à-porter</span>
-                        <span class="meta-chip"><i class="fa-solid fa-star" style="color: #F59E0B;"></i> Qualité & Nouveautés</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Thiès HLM 10e</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> HLM 10e, Thiès</span>
+                        <span class="meta-chip highlight-pill"><i class="fa-solid fa-star"></i> Sélection tendance</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible</span>
                     </div>
                     <div class="worker-actions">
                         <a href="tel:+221774582546" class="btn-primary-call" onclick="showToast('Appel à Tima Boutique...')">
                             <i class="fa-solid fa-phone"></i> 77 458 25 46
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('774582546')" title="Copier le numéro" aria-label="Copier le numéro de Tima Boutique">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221774582546')" title="Copier le numéro" aria-label="Copier le numéro de Tima Boutique">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221774582546?text=Bonjour%20Tima%20Boutique,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221774582546?text=Bonjour,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 18: Astar Shop (DUAL-FRAME j.jpeg & i.jpeg) -->
+            <!-- Worker 13: Astar Shop (WITH UNIFORM DUAL-FRAME j.jpeg & i.jpeg) -->
             <div class="worker-card with-image animate-on-scroll stagger-6" data-category="commerce">
-                <div class="image-frame dual-image-frame">
-                    <div class="dual-thumb" onclick="openLightbox('j.jpeg', 'Astar Shop', 'Boutique Alimentation — By Dykha', '+221770928888')">
+                <div class="image-frame dual-frame">
+                    <div class="sub-frame" onclick="openLightbox('j.jpeg', 'Astar Shop By Dykha', 'Boutique Alimentation - Logo officiel', '+221770928888')" title="Agrandir le logo Astar Shop">
+                        <img src="j.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
                         <img src="j.jpeg" alt="Astar Shop - Logo" class="worker-image">
-                        <span class="dual-badge"><i class="fa-solid fa-expand"></i> Enseigne</span>
+                        <span class="sub-label"><i class="fa-solid fa-image"></i> Logo</span>
                     </div>
-                    <div class="dual-thumb" onclick="openLightbox('i.jpeg', 'Astar Shop', 'Boutique Alimentation — By Dykha', '+221770928888')">
-                        <img src="i.jpeg" alt="Astar Shop - Produits" class="worker-image">
-                        <span class="dual-badge"><i class="fa-solid fa-expand"></i> Ravitaillement</span>
+                    <div class="sub-frame" onclick="openLightbox('i.jpeg', 'Astar Shop - Pack Ravitaillement', 'Boutique Alimentation - Produits', '+221770928888')" title="Agrandir les produits Astar Shop">
+                        <img src="i.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
+                        <img src="i.jpeg" alt="Astar Shop - Pack" class="worker-image">
+                        <span class="sub-label"><i class="fa-solid fa-box-open"></i> Packs</span>
                     </div>
                     <span class="card-badge-pill"><i class="fa-solid fa-basket-shopping"></i> Alimentation</span>
                 </div>
@@ -849,57 +652,56 @@
                         <span class="worker-job-pill">Boutique Alimentation</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-crown" style="color: #F59E0B;"></i> By Dykha</span>
-                        <span class="meta-chip"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Commandes WhatsApp</span>
-                        <span class="meta-chip"><i class="fa-solid fa-truck-fast"></i> Livraison possible</span>
+                        <span class="meta-chip"><i class="fa-solid fa-user" style="color: var(--primary-color);"></i> By Dykha</span>
+                        <span class="meta-chip"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> Commandes directes</span>
+                        <span class="meta-chip"><i class="fa-solid fa-truck-fast" style="color: var(--primary-color);"></i> Livraison possible</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible</span>
                     </div>
                     <div class="worker-actions">
                         <a href="tel:+221770928888" class="btn-primary-call" onclick="showToast('Appel à Astar Shop...')">
                             <i class="fa-solid fa-phone"></i> 77 092 88 88
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('770928888')" title="Copier le numéro" aria-label="Copier le numéro d'Astar Shop">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221770928888')" title="Copier le numéro" aria-label="Copier le numéro de Astar Shop">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221770928888?text=Bonjour%20Astar%20Shop,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221770928888?text=Bonjour%20Dykha,%20je%20souhaite%20passer%20une%20commande%20Astar%20Shop%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 19: Daba Fall (IMAGE c.jpeg) -->
-            <div class="worker-card with-image animate-on-scroll stagger-1" data-category="commerce">
+            <!-- Worker 14: Daba Fall (WITH UNIFORM IMAGE c.jpeg) -->
+            <div class="worker-card with-image animate-on-scroll stagger-7" data-category="commerce">
                 <div class="image-frame">
                     <img src="c.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
-                    <img src="c.jpeg" alt="Daba Fall" class="worker-image">
+                    <img src="c.jpeg" alt="Daba Business Shop" class="worker-image">
                     <span class="card-badge-pill"><i class="fa-solid fa-store"></i> Business Shop</span>
-                    <button class="image-preview-btn" onclick="openLightbox('c.jpeg', 'Daba Fall', 'Business Shop', '+221775433774')" title="Agrandir l'image" aria-label="Agrandir la photo de Daba Fall">
+                    <button class="image-preview-btn" onclick="openLightbox('c.jpeg', 'Daba Fall - Business Shop', 'Commerce & Produits variés', '+221775433774')" title="Agrandir l'image" aria-label="Agrandir l'affiche de Daba Fall">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
                         <h3>Daba Fall</h3>
-                        <span class="worker-job-pill">Business Shop</span>
+                        <span class="worker-job-pill">Daba Business Shop</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-shop"></i> Daba Business Shop</span>
-                        <span class="meta-chip"><i class="fa-solid fa-gem" style="color: #EC4899;"></i> Cosmétiques & Mode</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Quartier Dixième, Thiès</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> Quartier Dixième, Thiès</span>
+                        <span class="meta-chip highlight-pill"><i class="fa-solid fa-tag"></i> Articles divers</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible</span>
                     </div>
                     <div class="worker-actions">
                         <a href="tel:+221775433774" class="btn-primary-call" onclick="showToast('Appel à Daba Fall...')">
                             <i class="fa-solid fa-phone"></i> 77 543 37 74
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775433774')" title="Copier le numéro" aria-label="Copier le numéro de Daba Fall">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221775433774')" title="Copier le numéro" aria-label="Copier le numéro de Daba Fall">
                             <i class="fa-regular fa-copy"></i>
                         </button>
                         <a href="https://wa.me/221775433774?text=Bonjour%20Daba%20Fall,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
@@ -909,89 +711,85 @@
                 </div>
             </div>
 
-            <!-- Worker 20: AGENCE SOPE SERIGNE BABACAR SY (IMAGE d.jpeg) -->
-            <div class="worker-card with-image animate-on-scroll stagger-2" data-category="services">
+            <!-- Worker 15: AGENCE SOPE SERIGNE BABACAR SY (WITH UNIFORM IMAGE d.jpeg) -->
+            <div class="worker-card with-image animate-on-scroll stagger-1" data-category="services">
                 <div class="image-frame">
                     <img src="d.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
                     <img src="d.jpeg" alt="AGENCE SOPE SERIGNE BABACAR SY" class="worker-image">
-                    <span class="card-badge-pill"><i class="fa-solid fa-building"></i> Organisation Séminaire</span>
-                    <button class="image-preview-btn" onclick="openLightbox('d.jpeg', 'AGENCE SOPE SERIGNE BABACAR SY', 'Organisation Assistance Séminaire', '+221772380209')" title="Agrandir l'image" aria-label="Agrandir la photo de AGENCE SOPE SERIGNE BABACAR SY">
+                    <span class="card-badge-pill"><i class="fa-solid fa-briefcase"></i> Assistance Séminaire</span>
+                    <button class="image-preview-btn" onclick="openLightbox('d.jpeg', 'AGENCE SOPE SERIGNE BABACAR SY', 'Organisation Séminaires & Réceptions', '+221772380209')" title="Agrandir l'image" aria-label="Agrandir le flyer de l'Agence">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
-                        <h3>AGENCE SOPE SERIGNE BABACAR SY</h3>
-                        <span class="worker-job-pill">Organisation Assistance Séminaire</span>
+                        <h3>Agence Sope Babacar Sy</h3>
+                        <span class="worker-job-pill">Organisation & Séminaires</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-id-card"></i> NINEA: 000433368</span>
+                        <span class="meta-chip"><i class="fa-solid fa-certificate"></i> NINEA: 000433368</span>
                         <span class="meta-chip"><i class="fa-solid fa-file-contract"></i> RC: SN.THS.2000.A.1094</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Hlm 10ème, Villa 82-Thiès</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> HLM 10e, Villa 82</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible 24/7</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221772380209" class="btn-primary-call" onclick="showToast('Appel à AGENCE SOPE SERIGNE BABACAR SY...')">
+                        <a href="tel:+221772380209" class="btn-primary-call" onclick="showToast('Appel à l\'Agence...')">
                             <i class="fa-solid fa-phone"></i> 77 238 02 09
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('772380209')" title="Copier le numéro" aria-label="Copier le numéro de AGENCE SOPE SERIGNE BABACAR SY">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221772380209')" title="Copier le numéro" aria-label="Copier le numéro de l'Agence">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221772380209?text=Bonjour%20AGENCE%20SOPE%20SERIGNE%20BABACAR%20SY,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221772380209?text=Bonjour,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
-                    </div>
-                    <div class="worker-extra-phones">
-                        <a href="tel:+221339511492" class="btn-secondary-call" onclick="showToast('Appel fixe 33 951 14 92...')" title="Appeler le fixe"><i class="fa-solid fa-phone-volume"></i> 33 951 14 92</a><a href="tel:+221765448181" class="btn-secondary-call" onclick="showToast('Appel 76 544 81 81...')" title="Appeler le 76 544 81 81"><i class="fa-solid fa-mobile-screen"></i> 76 544 81 81</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 21: Alamine Business Groupe (IMAGE e.jpeg) -->
-            <div class="worker-card with-image animate-on-scroll stagger-3" data-category="services">
+            <!-- Worker 16: Alamine Business Groupe (WITH UNIFORM IMAGE e.jpeg) -->
+            <div class="worker-card with-image animate-on-scroll stagger-2" data-category="services">
                 <div class="image-frame">
                     <img src="e.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
                     <img src="e.jpeg" alt="Alamine Business Groupe" class="worker-image">
-                    <span class="card-badge-pill"><i class="fa-solid fa-champagne-glasses"></i> Traiteur & Réceptions</span>
-                    <button class="image-preview-btn" onclick="openLightbox('e.jpeg', 'Alamine Business Groupe', 'Traiteur & Organisation de Réceptions', '+221776511893')" title="Agrandir l'image" aria-label="Agrandir la photo de Alamine Business Groupe">
+                    <span class="card-badge-pill"><i class="fa-solid fa-utensils"></i> Traiteur</span>
+                    <button class="image-preview-btn" onclick="openLightbox('e.jpeg', 'Alamine Business Groupe', 'Traiteur & Organisation de Réceptions', '+221776511893')" title="Agrandir l'image" aria-label="Agrandir la carte d'Alamine Business">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
                         <h3>Alamine Business Groupe</h3>
-                        <span class="worker-job-pill">Traiteur & Organisation de Réceptions</span>
+                        <span class="worker-job-pill">Traiteur & Réceptions</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-calendar-check"></i> Mariages & Cérémonies</span>
-                        <span class="meta-chip"><i class="fa-solid fa-utensils"></i> Organisation réceptions</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> Thiès et Environs</span>
+                        <span class="meta-chip"><i class="fa-solid fa-cake-candles"></i> Mariages & Cérémonies</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> Thiès et Environs</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221776511893" class="btn-primary-call" onclick="showToast('Appel à Alamine Business Groupe...')">
+                        <a href="tel:+221776511893" class="btn-primary-call" onclick="showToast('Appel à Alamine Business...')">
                             <i class="fa-solid fa-phone"></i> 77 651 18 93
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('776511893')" title="Copier le numéro" aria-label="Copier le numéro de Alamine Business Groupe">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221776511893')" title="Copier le numéro" aria-label="Copier le numéro d'Alamine Business">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221776511893?text=Bonjour%20Alamine%20Business%20Groupe,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221776511893?text=Bonjour,%20je%20souhaite%20des%20services%20de%20traiteur%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 22: Ameth Diokhané -->
-            <div class="worker-card animate-on-scroll stagger-4" data-category="btp">
+            <!-- Worker 17: Ameth Diokhané -->
+            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Électricité</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-bolt"></i> BTP & Dépannage</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
@@ -999,406 +797,487 @@
                         <div class="worker-avatar electricien">
                             <i class="fa-solid fa-bolt"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
                     <h3>Ameth Diokhané</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Electricien</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                        <span class="worker-job-badge">Électricien Bâtiment</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> 10e & Thiès</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Installations domestiques</span>
-                        <span class="specialty-chip">Dépannage rapide</span>
-                        <span class="specialty-chip">Disjoncteurs & Éclairage</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-plug-circle-bolt"></i> Dépannage urgent</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-network-wired"></i> Câblage & tableaux</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-lightbulb"></i> Installation LED</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-shield-halved"></i> Travail soigné & sécurisé</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221776587139" class="btn-primary-call" onclick="showToast('Appel à Ameth Diokhané...')">
-                            <i class="fa-solid fa-phone"></i> 77 658 71 39
+                        <a href="tel:+221772205481" class="btn-primary-call" onclick="showToast('Appel à Ameth Diokhané...')">
+                            <i class="fa-solid fa-phone"></i> 77 220 54 81
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('776587139')" title="Copier le numéro" aria-label="Copier le numéro de Ameth Diokhané">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221772205481')" title="Copier le numéro" aria-label="Copier le numéro de Ameth Diokhané">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221776587139?text=Bonjour%20Ameth%20Diokhan%C3%A9,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221772205481?text=Bonjour%20Ameth,%20j'ai%20besoin%20d'un%20électricien%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 23: Cheikh Sarr -->
-            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
+            <!-- Worker 18: Pape Ndiaye -->
+            <div class="worker-card animate-on-scroll stagger-4" data-category="btp">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Carrelage</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-paint-roller"></i> BTP & Rénovation</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar construction">
-                            <i class="fa-solid fa-border-all"></i>
+                        <div class="worker-avatar ouvrier">
+                            <i class="fa-solid fa-paint-roller"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Cheikh Sarr</h3>
+                    <h3>Pape Ndiaye</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Carreleur</span>
+                        <span class="worker-job-badge">Peintre Bâtiment</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Pose carrelage sol & mur</span>
-                        <span class="specialty-chip">Faïence & Salle de bain</span>
-                        <span class="specialty-chip">Finitions soignées</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-brush"></i> Peinture intérieure/extérieure</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-gem"></i> Finitions haute qualité</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-house"></i> Façades & boiseries</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-star"></i> Finitions soignées</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221774179971" class="btn-primary-call" onclick="showToast('Appel à Cheikh Sarr...')">
-                            <i class="fa-solid fa-phone"></i> 77 417 99 71
+                        <a href="tel:+221776230984" class="btn-primary-call" onclick="showToast('Appel à Pape Ndiaye...')">
+                            <i class="fa-solid fa-phone"></i> 77 623 09 84
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('774179971')" title="Copier le numéro" aria-label="Copier le numéro de Cheikh Sarr">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221776230984')" title="Copier le numéro" aria-label="Copier le numéro de Pape Ndiaye">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221774179971?text=Bonjour%20Cheikh%20Sarr,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221776230984?text=Bonjour%20Pape%20Ndiaye,%20j'ai%20besoin%20d'un%20peintre%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 24: Ndiéguéne -->
-            <div class="worker-card animate-on-scroll stagger-6" data-category="services">
+            <!-- Worker 19: Ndoffène Ndione -->
+            <div class="worker-card animate-on-scroll stagger-5" data-category="services">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-handshake-angle"></i> Entretien & Lavage</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-house-chimney"></i> Immobilier & Foncier</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar livreur">
-                            <i class="fa-solid fa-car-side"></i>
+                        <div class="worker-avatar immobilier">
+                            <i class="fa-solid fa-house-chimney"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Ndiéguéne</h3>
+                    <h3>Ndoffène Ndione</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Lavage Véhicules & Moto</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                        <span class="worker-job-badge">Agent Foncier & Immobilier</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Thiès & Région</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Lavage auto complet</span>
-                        <span class="specialty-chip">Nettoyage motos & Jakarta</span>
-                        <span class="specialty-chip">Lavage haute pression</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-map-location-dot"></i> Terrains titrés</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-key"></i> Locations appartements</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-handshake"></i> Conseil & gestion</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-file-contract"></i> Actes sécurisés</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221775674729" class="btn-primary-call" onclick="showToast('Appel à Ndiéguéne...')">
-                            <i class="fa-solid fa-phone"></i> 77 567 47 29
+                        <a href="tel:+221779648050" class="btn-primary-call" onclick="showToast('Appel à Ndoffène Ndione...')">
+                            <i class="fa-solid fa-phone"></i> 77 964 80 50
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775674729')" title="Copier le numéro" aria-label="Copier le numéro de Ndiéguéne">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221779648050')" title="Copier le numéro" aria-label="Copier le numéro de Ndoffène Ndione">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221775674729?text=Bonjour%20Ndi%C3%A9gu%C3%A9ne,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221779648050?text=Bonjour%20Ndoffène,%20je%20recherche%20un%20logement/terrain%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 25: Al Mountakha Travaux & Services -->
-            <div class="worker-card animate-on-scroll stagger-1" data-category="btp">
+            <!-- Worker 20: Fallou -->
+            <div class="worker-card animate-on-scroll stagger-6" data-category="livraison">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> BTP & Travaux Publics</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-bottle-water"></i> Ravitaillement</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
-                        <div class="worker-avatar construction">
-                            <i class="fa-solid fa-hard-hat"></i>
+                        <div class="worker-avatar eau">
+                            <i class="fa-solid fa-bottle-water"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Al Mountakha Travaux & Services</h3>
+                    <h3>Fallou</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Construction & Travaux Publics</span>
+                        <span class="worker-job-badge">Livreur Eau & Boissons</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Abibou Ndiaye</span>
-                        <span class="specialty-chip">Devis de construction</span>
-                        <span class="specialty-chip">Pose de pavés & VRD</span>
-                        <span class="specialty-chip">Bâtiments</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-cubes"></i> Bonbonnes 10L & 19L</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-box"></i> Packs eau minérale</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-truck-ramp-box"></i> Livraison à l'étage</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Tournée quotidienne</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221777288504" class="btn-primary-call" onclick="showToast('Appel à Al Mountakha Travaux & Services...')">
-                            <i class="fa-solid fa-phone"></i> 77 728 85 04
+                        <a href="tel:+221771750826" class="btn-primary-call" onclick="showToast('Appel à Fallou...')">
+                            <i class="fa-solid fa-phone"></i> 77 175 08 26
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('777288504')" title="Copier le numéro" aria-label="Copier le numéro de Al Mountakha Travaux & Services">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221771750826')" title="Copier le numéro" aria-label="Copier le numéro de Fallou">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221777288504?text=Bonjour%20Al%20Mountakha%20Travaux%20%26%20Services,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221771750826?text=Bonjour%20Fallou,%20je%20souhaite%20une%20livraison%20d'eau%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 26: Ndéye Fatou Niang (IMAGE f.jpeg) -->
-            <div class="worker-card with-image animate-on-scroll stagger-2" data-category="services">
+            <!-- Worker 21: Serigne Saliou Ndiaye -->
+            <div class="worker-card animate-on-scroll stagger-7" data-category="services">
+                <div class="worker-card-cover">
+                    <span class="card-cat-badge"><i class="fa-solid fa-book-quran"></i> Éducation & Enseignement</span>
+                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
+                </div>
+                <div class="worker-card-body">
+                    <div class="worker-avatar-wrap">
+                        <div class="worker-avatar oustaz">
+                            <i class="fa-solid fa-book-quran"></i>
+                        </div>
+                        <span class="avatar-live-indicator" title="En service"></span>
+                    </div>
+                    <h3>Serigne Saliou Ndiaye</h3>
+                    <div class="worker-role-line">
+                        <span class="worker-job-badge">Oustaz / Enseignant</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                    </div>
+                    <div class="worker-specialties-list">
+                        <span class="specialty-chip"><i class="fa-solid fa-graduation-cap"></i> Éducation coranique</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-book-open"></i> Soutien scolaire enfants</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-user-group"></i> Cours à domicile</span>
+                    </div>
+                    <div class="worker-trust-strip">
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-certificate"></i> Pédagogie reconnue</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="tel:+221778217851" class="btn-primary-call" onclick="showToast('Appel à Serigne Saliou Ndiaye...')">
+                            <i class="fa-solid fa-phone"></i> 77 821 78 51
+                        </a>
+                        <button class="copy-phone-btn" onclick="copyPhone('+221778217851')" title="Copier le numéro" aria-label="Copier le numéro de Serigne Saliou Ndiaye">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <a href="https://wa.me/221778217851?text=Bonjour%20Oustaz,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worker 22: Ndéye Fatou Niang / JIGUEEN STYLE (WITH UNIFORM IMAGE f.jpeg) -->
+            <div class="worker-card with-image animate-on-scroll stagger-1" data-category="services">
                 <div class="image-frame">
                     <img src="f.jpeg" alt="" class="image-blur-bg" aria-hidden="true">
-                    <img src="f.jpeg" alt="Ndéye Fatou Niang" class="worker-image">
-                    <span class="card-badge-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Coiffure & Esthétique</span>
-                    <button class="image-preview-btn" onclick="openLightbox('f.jpeg', 'Ndéye Fatou Niang', 'Salon de coiffure — JIGUEEN STYLE by NDF', '+221777622314')" title="Agrandir l'image" aria-label="Agrandir la photo de Ndéye Fatou Niang">
+                    <img src="f.jpeg" alt="JIGUEEN STYLE by NDF" class="worker-image">
+                    <span class="card-badge-pill"><i class="fa-solid fa-scissors"></i> Coiffure & Beauté</span>
+                    <button class="image-preview-btn" onclick="openLightbox('f.jpeg', 'JIGUEEN STYLE by NDF', 'Salon de coiffure - Ndéye Fatou Niang', '+221777622314')" title="Agrandir l'image" aria-label="Agrandir la photo de JIGUEEN STYLE">
                         <i class="fa-solid fa-expand"></i>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="card-header-info">
                         <h3>Ndéye Fatou Niang</h3>
-                        <span class="worker-job-pill">Salon de coiffure — JIGUEEN STYLE by NDF</span>
+                        <span class="worker-job-pill">JIGUEEN STYLE by NDF</span>
                     </div>
                     <div class="meta-chips-grid">
-                        <span class="meta-chip"><i class="fa-solid fa-scissors"></i> JIGUEEN STYLE by NDF</span>
-                        <span class="meta-chip"><i class="fa-solid fa-heart" style="color: #E11D48;"></i> Tresses & Soins capillaires</span>
-                        <span class="meta-chip"><i class="fa-solid fa-location-dot"></i> HLM 10e, Thiès</span>
+                        <span class="meta-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Coiffure & Soins</span>
+                        <span class="meta-chip"><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> HLM 10e, Thiès</span>
                     </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                    <div class="worker-status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221777622314" class="btn-primary-call" onclick="showToast('Appel à Ndéye Fatou Niang...')">
+                        <a href="tel:+221777622314" class="btn-primary-call" onclick="showToast('Appel à JIGUEEN STYLE...')">
                             <i class="fa-solid fa-phone"></i> 77 762 23 14
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('777622314')" title="Copier le numéro" aria-label="Copier le numéro de Ndéye Fatou Niang">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221777622314')" title="Copier le numéro" aria-label="Copier le numéro de Ndéye Fatou Niang">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221777622314?text=Bonjour%20Nd%C3%A9ye%20Fatou%20Niang,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221777622314?text=Bonjour,%20je%20souhaite%20prendre%20rendez-vous%20au%20salon%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 27: Pape Touré -->
+            <!-- Worker 23: Djibril -->
+            <div class="worker-card animate-on-scroll stagger-2" data-category="btp">
+                <div class="worker-card-cover">
+                    <span class="card-cat-badge"><i class="fa-solid fa-wrench"></i> Plomberie & Sanitaire</span>
+                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
+                </div>
+                <div class="worker-card-body">
+                    <div class="worker-avatar-wrap">
+                        <div class="worker-avatar plombier">
+                            <i class="fa-solid fa-wrench"></i>
+                        </div>
+                        <span class="avatar-live-indicator" title="En service"></span>
+                    </div>
+                    <h3>Djibril</h3>
+                    <div class="worker-role-line">
+                        <span class="worker-job-badge">Plombier Sanitaire</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e & Thiès</span>
+                    </div>
+                    <div class="worker-specialties-list">
+                        <span class="specialty-chip"><i class="fa-solid fa-droplet-slash"></i> Réparation de fuites</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-water"></i> Débouchage express</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-shower"></i> Installation sanitaire</span>
+                    </div>
+                    <div class="worker-trust-strip">
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Intervention rapide</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="tel:+221773482910" class="btn-primary-call" onclick="showToast('Appel à Djibril...')">
+                            <i class="fa-solid fa-phone"></i> 77 348 29 10
+                        </a>
+                        <button class="copy-phone-btn" onclick="copyPhone('+221773482910')" title="Copier le numéro" aria-label="Copier le numéro de Djibril">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <a href="https://wa.me/221773482910?text=Bonjour%20Djibril,%20j'ai%20besoin%20d'un%20plombier%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worker 24: Dame -->
             <div class="worker-card animate-on-scroll stagger-3" data-category="services">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-handshake-angle"></i> Beauté & Coiffure</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-utensils"></i> Traiteur & Événements</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
                         <div class="worker-avatar traiteur">
-                            <i class="fa-solid fa-scissors"></i>
+                            <i class="fa-solid fa-utensils"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Pape Touré</h3>
+                    <h3>Dame</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Coiffeur</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                        <span class="worker-job-badge">Traiteur Événementiel</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Thiès & Région</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Coiffure hommes & enfants</span>
-                        <span class="specialty-chip">Tailles barbe & dégradés</span>
-                        <span class="specialty-chip">Service soigné</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-champagne-glasses"></i> Baptêmes & Réceptions</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-bowl-food"></i> Plats traditionnels & buffets</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-users"></i> Grandes assemblées</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-star"></i> Goût & présentation</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221774487813" class="btn-primary-call" onclick="showToast('Appel à Pape Touré...')">
-                            <i class="fa-solid fa-phone"></i> 77 448 87 13
+                        <a href="tel:+221773102514" class="btn-primary-call" onclick="showToast('Appel à Dame...')">
+                            <i class="fa-solid fa-phone"></i> 77 310 25 14
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('774487813')" title="Copier le numéro" aria-label="Copier le numéro de Pape Touré">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221773102514')" title="Copier le numéro" aria-label="Copier le numéro de Dame">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221774487813?text=Bonjour%20Pape%20Tour%C3%A9,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221773102514?text=Bonjour%20Dame,%20je%20vous%20contacte%20pour%20un%20service%20traiteur%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 28: Ferme Khadim Rassoul -->
+            <!-- Worker 25: Dame Ndiaye -->
             <div class="worker-card animate-on-scroll stagger-4" data-category="commerce">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Élevage & Boucherie</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-print"></i> Papeterie & Fournitures</span>
+                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
+                </div>
+                <div class="worker-card-body">
+                    <div class="worker-avatar-wrap">
+                        <div class="worker-avatar papaterie">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <span class="avatar-live-indicator" title="En service"></span>
+                    </div>
+                    <h3>Dame Ndiaye</h3>
+                    <div class="worker-role-line">
+                        <span class="worker-job-badge">Papeterie & Impression</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                    </div>
+                    <div class="worker-specialties-list">
+                        <span class="specialty-chip"><i class="fa-solid fa-book"></i> Fournitures scolaires</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-copy"></i> Photocopie & tirage</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-file-pdf"></i> Impression documents</span>
+                    </div>
+                    <div class="worker-trust-strip">
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-clock"></i> Service immédiat</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="tel:+221776466435" class="btn-primary-call" onclick="showToast('Appel à Dame Ndiaye...')">
+                            <i class="fa-solid fa-phone"></i> 77 646 64 35
+                        </a>
+                        <button class="copy-phone-btn" onclick="copyPhone('+221776466435')" title="Copier le numéro" aria-label="Copier le numéro de Dame Ndiaye">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <a href="https://wa.me/221776466435?text=Bonjour%20Dame%20Ndiaye,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Worker 26: Abdou Diakhaté -->
+            <div class="worker-card animate-on-scroll stagger-5" data-category="commerce">
+                <div class="worker-card-cover">
+                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Commerce & Alimentation</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
                         <div class="worker-avatar commercant">
-                            <i class="fa-solid fa-cow"></i>
+                            <i class="fa-solid fa-store"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Ferme Khadim Rassoul</h3>
+                    <h3>Abdou Diakhaté</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Vente Poulets, Bœufs & Moutons</span>
+                        <span class="worker-job-badge">Commerçant Général</span>
                         <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Poulets de chair & ponte</span>
-                        <span class="specialty-chip">Moutons de fête & Tabaski</span>
-                        <span class="specialty-chip">Bœufs sur commande</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-cart-shopping"></i> Denrées & épicerie</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-boxes-stacked"></i> Gros et demi-gros</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-circle-dollar-to-slot"></i> Prix de quartier</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-door-open"></i> Boutique ouverte</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221770979188" class="btn-primary-call" onclick="showToast('Appel à Ferme Khadim Rassoul...')">
-                            <i class="fa-solid fa-phone"></i> 77 097 91 88
+                        <a href="tel:+221772271820" class="btn-primary-call" onclick="showToast('Appel à Abdou Diakhaté...')">
+                            <i class="fa-solid fa-phone"></i> 77 227 18 20
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('770979188')" title="Copier le numéro" aria-label="Copier le numéro de Ferme Khadim Rassoul">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221772271820')" title="Copier le numéro" aria-label="Copier le numéro de Abdou Diakhaté">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221770979188?text=Bonjour%20Ferme%20Khadim%20Rassoul,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221772271820?text=Bonjour%20Abdou%20Diakhaté,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Worker 29: Darou Bayré Construction -->
-            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
+            <!-- Worker 27: Ibou -->
+            <div class="worker-card animate-on-scroll stagger-6" data-category="btp">
                 <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Bâtiment & Ferronnerie</span>
+                    <span class="card-cat-badge"><i class="fa-solid fa-shield-halved"></i> Métallerie & Soudure</span>
                     <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
                 </div>
                 <div class="worker-card-body">
                     <div class="worker-avatar-wrap">
                         <div class="worker-avatar menuisier-metal">
-                            <i class="fa-solid fa-hammer"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Darou Bayré Construction</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Menuiserie Métallique</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Charpentes métalliques</span>
-                        <span class="specialty-chip">Portes fer & grilles</span>
-                        <span class="specialty-chip">Ferronnerie générale</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221775410378" class="btn-primary-call" onclick="showToast('Appel à Darou Bayré Construction...')">
-                            <i class="fa-solid fa-phone"></i> 77 541 03 78
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('775410378')" title="Copier le numéro" aria-label="Copier le numéro de Darou Bayré Construction">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221775410378?text=Bonjour%20Darou%20Bayr%C3%A9%20Construction,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 30: Entreprise Mini Forage -->
-            <div class="worker-card animate-on-scroll stagger-6" data-category="btp">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-trowel-bricks"></i> Hydraulique & Forages</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar construction">
-                            <i class="fa-solid fa-water"></i>
-                        </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
-                    </div>
-                    <h3>Entreprise Mini Forage</h3>
-                    <div class="worker-role-line">
-                        <span class="worker-job-badge">Forages</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
-                    </div>
-                    <div class="worker-specialties-list">
-                        <span class="specialty-chip">Forages d'eau potable</span>
-                        <span class="specialty-chip">Installation pompes</span>
-                        <span class="specialty-chip">Maintenance puits & forages</span>
-                    </div>
-                    <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
-                    </div>
-                    <div class="worker-actions">
-                        <a href="tel:+221773567118" class="btn-primary-call" onclick="showToast('Appel à Entreprise Mini Forage...')">
-                            <i class="fa-solid fa-phone"></i> 77 356 71 18
-                        </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('773567118')" title="Copier le numéro" aria-label="Copier le numéro de Entreprise Mini Forage">
-                            <i class="fa-regular fa-copy"></i>
-                        </button>
-                        <a href="https://wa.me/221773567118?text=Bonjour%20Entreprise%20Mini%20Forage,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Worker 31: Fall Business -->
-            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
-                <div class="worker-card-cover">
-                    <span class="card-cat-badge"><i class="fa-solid fa-store"></i> Assurance & Beauté</span>
-                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
-                </div>
-                <div class="worker-card-body">
-                    <div class="worker-avatar-wrap">
-                        <div class="worker-avatar immobilier">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
-                        <span class="avatar-live-indicator" title="Disponible"></span>
+                        <span class="avatar-live-indicator" title="En service"></span>
                     </div>
-                    <h3>Fall Business</h3>
+                    <h3>Ibou</h3>
                     <div class="worker-role-line">
-                        <span class="worker-job-badge">Assurance & Cosmétiques</span>
-                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e</span>
+                        <span class="worker-job-badge">Menuisier Métallique</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Quartier 10e & Thiès</span>
                     </div>
                     <div class="worker-specialties-list">
-                        <span class="specialty-chip">Conseil & Assurance</span>
-                        <span class="specialty-chip">Produits cosmétiques</span>
-                        <span class="specialty-chip">Soins & bien-être</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-door-closed"></i> Portes & portails fer</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-bars"></i> Grilles de sécurité</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-wrench"></i> Rideaux métalliques</span>
                     </div>
                     <div class="worker-trust-strip">
-                        <span class="trust-status-pill"><span class="dot"></span> Disponible</span>
-                        <span class="trust-badge-response"><i class="fa-regular fa-clock"></i> Réponse rapide</span>
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-shield"></i> Solidité éprouvée</span>
                     </div>
                     <div class="worker-actions">
-                        <a href="tel:+221779979969" class="btn-primary-call" onclick="showToast('Appel à Fall Business...')">
-                            <i class="fa-solid fa-phone"></i> 77 997 99 69
+                        <a href="tel:+221773501280" class="btn-primary-call" onclick="showToast('Appel à Ibou...')">
+                            <i class="fa-solid fa-phone"></i> 77 350 12 80
                         </a>
-                        <button class="copy-phone-btn" onclick="copyPhone('779979969')" title="Copier le numéro" aria-label="Copier le numéro de Fall Business">
+                        <button class="copy-phone-btn" onclick="copyPhone('+221773501280')" title="Copier le numéro" aria-label="Copier le numéro de Ibou">
                             <i class="fa-regular fa-copy"></i>
                         </button>
-                        <a href="https://wa.me/221779979969?text=Bonjour%20Fall%20Business,%20je%20vous%20contacte%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                        <a href="https://wa.me/221773501280?text=Bonjour%20Ibou,%20j'ai%20besoin%20de%20travaux%20métalliques%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
                             <i class="fa-brands fa-whatsapp"></i>
                         </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Worker 28: Khadim -->
+            <div class="worker-card animate-on-scroll stagger-7" data-category="services">
+                <div class="worker-card-cover">
+                    <span class="card-cat-badge"><i class="fa-solid fa-snowflake"></i> Climatisation & Froid</span>
+                    <span class="card-verified-tag"><i class="fa-solid fa-circle-check"></i> Vérifié</span>
+                </div>
+                <div class="worker-card-body">
+                    <div class="worker-avatar-wrap">
+                        <div class="worker-avatar frigoriste">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <span class="avatar-live-indicator" title="En service"></span>
+                    </div>
+                    <h3>Khadim</h3>
+                    <div class="worker-role-line">
+                        <span class="worker-job-badge">Frigoriste & Climatisation</span>
+                        <span class="worker-location-tag"><i class="fa-solid fa-location-dot"></i> Thiès & Région</span>
+                    </div>
+                    <div class="worker-specialties-list">
+                        <span class="specialty-chip"><i class="fa-solid fa-temperature-arrow-down"></i> Recharge gaz & entretien</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-gears"></i> Dépannage clim rapide</span>
+                        <span class="specialty-chip"><i class="fa-solid fa-plug"></i> Réparation réfrigérateurs</span>
+                    </div>
+                    <div class="worker-trust-strip">
+                        <span class="trust-status-pill"><span class="pulse-dot"></span> Disponible</span>
+                        <span class="trust-badge-response"><i class="fa-solid fa-bolt"></i> Dépannage urgent</span>
+                    </div>
+                    <div class="worker-actions">
+                        <a href="tel:+221778421905" class="btn-primary-call" onclick="showToast('Appel à Khadim...')">
+                            <i class="fa-solid fa-phone"></i> 77 842 19 05
+                        </a>
+                        <button class="copy-phone-btn" onclick="copyPhone('+221778421905')" title="Copier le numéro" aria-label="Copier le numéro de Khadim">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                        <a href="https://wa.me/221778421905?text=Bonjour%20Khadim,%20j'ai%20besoin%20d'un%20dépannage%20frigo/clim%20via%20Dixième%20Services." target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Contacter sur WhatsApp" onclick="showToast('Ouverture WhatsApp...')">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Nos Services Clés Section -->
     <section id="services" aria-labelledby="services-heading">
         <div class="section-header-center animate-on-scroll">
             <div class="pill-badge pill-emerald">
@@ -1407,20 +1286,19 @@
             </div>
             <h2 id="services-heading" class="heading">Nos Services de Proximité</h2>
             <p class="heading-sub">
-                Des solutions rapides, fiables et coordonnées par la direction du Quartier Dixième pour répondre à tous vos besoins quotidiens.
+                Des solutions rapides, fiables et adaptées à votre quotidien au Quartier Dixième et dans toute la commune de Thiès.
             </p>
         </div>
 
         <div class="services-grid">
-            <!-- Service 1: Pharmacie de garde -->
             <div class="service-card animate-on-scroll stagger-1">
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=800&auto=format&fit=crop" alt="Pharmacie de garde au Quartier Dixième" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1586015555751-63bb77f4322a?w=600&auto=format&fit=crop&q=80" alt="Pharmacie de garde au quartier Dixième" loading="lazy">
                     <div class="icon-overlay green"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
                 </div>
                 <div class="card-content">
-                    <h3>Pharmacie de garde</h3>
-                    <p>Service de livraison de médicaments à domicile. Commandez vos médicaments et recevez-les rapidement chez vous.</p>
+                    <h3>Pharmacie de Garde</h3>
+                    <p>Accédez instantanément à la pharmacie de garde du quartier et bénéficiez de conseils de santé fiables 24h/24.</p>
                     <div class="card-footer">
                         <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel permanence pharmacie...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
@@ -1429,85 +1307,80 @@
                 </div>
             </div>
 
-            <!-- Service 2: Immobilier -->
             <div class="service-card animate-on-scroll stagger-2">
                 <div class="img-container">
-                    <img src="https://keurcity.com/wp-content/uploads/2021/10/Location-bien-immobilier-Senegal.jpg" alt="Immobilier et Terrains au Quartier Dixième" loading="lazy">
-                    <div class="icon-overlay purple"><i class="fa-solid fa-house-chimney"></i></div>
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=80" alt="Immobilier et terrains au quartier Dixième" loading="lazy">
+                    <div class="icon-overlay purple"><i class="fa-solid fa-house"></i></div>
                 </div>
                 <div class="card-content">
-                    <h3>Immobilier</h3>
-                    <p>Terrains et maisons à vendre dans le quartier. Trouvez la propriété de vos rêves avec notre accompagnement personnalisé.</p>
+                    <h3>Immobilier & Terrains</h3>
+                    <p>Trouvez rapidement des maisons en location, des terrains titrés et des opportunités d'investissement fiables à Thiès.</p>
                     <div class="card-footer">
-                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel service immobilier...')">
+                        <a href="tel:+221779648050" class="contact-link" onclick="showToast('Appel agent immobilier...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 3: Livraison -->
             <div class="service-card animate-on-scroll stagger-3">
                 <div class="img-container">
-                    <img src="livraison_express_thies.jpg" alt="Service de livraison rapide par moto au Quartier Dixième" loading="lazy">
+                    <img src="livraison_express_thies.jpg" alt="Livraison express moto à Thiès" loading="lazy">
                     <div class="icon-overlay orange"><i class="fa-solid fa-motorcycle"></i></div>
                 </div>
                 <div class="card-content">
-                    <h3>Livraison</h3>
-                    <p>Service de livraison rapide par moto. Vos colis livrés en un temps record partout dans le quartier et ses environs.</p>
+                    <h3>Livraison Express par Moto</h3>
+                    <p>Faites livrer vos colis, plis, courses et repas en un temps record partout à Thiès et dans les environs.</p>
                     <div class="card-footer">
-                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel service livraison...')">
+                        <a href="tel:+221771653781" class="contact-link" onclick="showToast('Appel livreur express...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 4: Plomberie -->
             <div class="service-card animate-on-scroll stagger-4">
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&auto=format&fit=crop&q=80" alt="Intervention plomberie d'urgence au Quartier Dixième" loading="lazy">
-                    <div class="icon-overlay blue"><i class="fa-solid fa-faucet"></i></div>
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&auto=format&fit=crop&q=80" alt="BTP et Maçonnerie au quartier Dixième" loading="lazy">
+                    <div class="icon-overlay blue"><i class="fa-solid fa-trowel-bricks"></i></div>
                 </div>
                 <div class="card-content">
-                    <h3>Plomberie</h3>
-                    <p>Intervention rapide pour toute fuite, réparation de chauffe-eau ou installation sanitaire dans votre domicile.</p>
+                    <h3>BTP & Rénovation</h3>
+                    <p>Maçonnerie générale, carrelage, menuiserie, toiture et peinture par des artisans expérimentés du quartier.</p>
                     <div class="card-footer">
-                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel service plomberie...')">
+                        <a href="tel:+221771223629" class="contact-link" onclick="showToast('Appel artisan BTP...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 5: Électricité -->
             <div class="service-card animate-on-scroll stagger-5">
                 <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="Dépannage électricité au Quartier Dixième" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80" alt="Électricité et Plomberie d'urgence à Thiès" loading="lazy">
                     <div class="icon-overlay yellow"><i class="fa-solid fa-bolt"></i></div>
                 </div>
                 <div class="card-content">
-                    <h3>Électricité</h3>
-                    <p>Dépannage électrique, installation de prises, réparation de court-circuit et mise aux normes de votre installation.</p>
+                    <h3>Électricité & Plomberie</h3>
+                    <p>Dépannage d'urgence, installations électriques, fuites d'eau, canalisations et maintenance sanitaire sécurisée.</p>
                     <div class="card-footer">
-                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel service électricité...')">
+                        <a href="tel:+221772205481" class="contact-link" onclick="showToast('Appel électricien...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Service 6: Location de Voiture -->
             <div class="service-card animate-on-scroll stagger-6">
                 <div class="img-container">
-                    <img src="https://yiricar.com/wp-content/uploads/2024/02/FORD-FUSION-TITANIUM-1.jpg" alt="Location de véhicules à Thiès et environs" loading="lazy">
+                    <img src="https://yiricar.com/wp-content/uploads/2024/02/FORD-FUSION-TITANIUM-1.jpg" alt="Location de véhicules à Thiès" loading="lazy">
                     <div class="icon-overlay red-icon"><i class="fa-solid fa-car"></i></div>
                 </div>
                 <div class="card-content">
                     <h3>Location de Voiture</h3>
                     <p>Location de véhicules pour vos déplacements personnels ou professionnels à Thiès et ses environs.</p>
                     <div class="card-footer">
-                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel location véhicule...')">
+                        <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel service location...')">
                             Contacter <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -1516,6 +1389,7 @@
         </div>
     </section>
 
+    <!-- Démarches Administratives Section -->
     <section id="demarches" aria-labelledby="demarches-heading">
         <div class="section-header-center animate-on-scroll">
             <div class="pill-badge pill-blue">
@@ -1881,12 +1755,12 @@
             <div class="footer-col">
                 <h3>Services Clés</h3>
                 <ul>
-                    <li><a href="#services">Pharmacie de garde</a></li>
-                    <li><a href="#services">Immobilier</a></li>
-                    <li><a href="#services">Livraison express</a></li>
-                    <li><a href="#services">Plomberie</a></li>
-                    <li><a href="#services">Électricité</a></li>
-                    <li><a href="#services">Location de Voiture</a></li>
+                    <li><a href="#services">Pharmacie de garde 24/7</a></li>
+                    <li><a href="#workers">Artisans BTP & Maçonnerie</a></li>
+                    <li><a href="#services">Livraison express par moto</a></li>
+                    <li><a href="#services">Électricité & Plomberie</a></li>
+                    <li><a href="#assistance">Encadrement scolaire</a></li>
+                    <li><a href="#assistance">Permanence santé</a></li>
                 </ul>
             </div>
             <div class="footer-col footer-contact">

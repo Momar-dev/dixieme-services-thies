@@ -1,0 +1,3010 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixième Services - Le Quartier Dixième à Thiès</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23ED2939'/%3E%3Cpath d='M35 45c-3 0-5 2-5 5s2 5 5 5h5l10 15c2 3 6 3 8 0l20-20c2-2 2-5 0-7s-5-2-7 0L55 55 45 45H35z' fill='white'/%3E%3C/svg%3E">
+    <meta name="description" content="Vos services de proximité fiables au Quartier Dixième à Thiès : Pharmacie de garde, Livraison express par moto, Immobilier (Terrains/Maisons). Appelez le +221 77 213 33 98.">
+    <meta property="og:title" content="Dixième Services | Services de Proximité à Thiès">
+    <meta property="og:description" content="Pharmacie, Plomberie, Livraison, Immobilier : Le meilleur des services locaux au Quartier Dixième.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #ED2939;
+            --primary-dark: #c42232;
+            --secondary-color: #2d3436;
+            --footer-bg: #1c2331; 
+            --light-text: #ddd;
+            --light-bg: #f8f9fa; 
+            --white: #fff;
+            --max-width: 1280px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.12);
+            --shadow-lg: 0 15px 40px rgba(0,0,0,0.15);
+            --shadow-primary: 0 10px 30px rgba(237, 41, 57, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7; 
+            color: var(--secondary-color);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+
+        section {
+            padding: 100px 8%; 
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 70px; 
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color); 
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .logo i {
+             margin-right: 10px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-right: 25px; 
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            margin-left: 22px; 
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active {
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+        
+        .header-cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px; 
+            text-decoration: none;
+            border-radius: 50px; 
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(237, 41, 57, 0.2);
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        .header-cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(237, 41, 57, 0.35);
+        }
+
+        .header-cta-button:active {
+            transform: translateY(0);
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            min-height: 100vh; 
+            padding: 140px 8% 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #ED2939 0%, #c42232 50%, #a31d2a 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.15;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-content h1 span {
+            background: linear-gradient(90deg, #fff 0%, #ffdde1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 40px; 
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        
+        .hero-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 60px;
+            animation: fadeInUp 0.8s ease 0.8s both;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+        }
+
+        .hero-stat .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px 35px; 
+            text-decoration: none;
+            border-radius: 50px; 
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+
+        .cta-button.red {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 10px rgba(237, 41, 57, 0.3);
+        }
+        
+        .cta-button:not(.red) {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+        
+        .cta-button.red:hover {
+            background-color: var(--primary-dark); 
+            box-shadow: 0 8px 25px rgba(237, 41, 57, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .cta-button:not(.red):hover {
+            background-color: var(--white);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        /* Features Section */
+        #features {
+            background: var(--white);
+            padding: 80px 8%;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 16px;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--white);
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.3;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        .feature-icon.red { background: var(--primary-color); }
+        .feature-icon.green { background: #4CAF50; }
+        .feature-icon.blue { background: #2196F3; }
+        .feature-icon.orange { background: #FF9800; }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--secondary-color);
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        #services {
+            background-color: var(--light-bg);
+            padding-top: 50px; 
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px; 
+            margin-bottom: 70px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 0; 
+            text-align: left;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            z-index: 10;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card {
+            position: relative;
+        }
+
+        .service-card .img-container {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .service-card .img-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover .img-container::after {
+            opacity: 1;
+        }
+
+        .service-card .icon-overlay {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .icon-overlay.green { background-color: #4CAF50; } 
+        .icon-overlay.purple { background-color: #9C27B0; } 
+        .icon-overlay.orange { background-color: #FF5722; } 
+        .icon-overlay.blue { background-color: #2196F3; }
+        .icon-overlay.yellow { background-color: #FFC107; }
+        .icon-overlay.red-icon { background-color: var(--primary-color); }
+
+        .service-card .card-content {
+            padding: 25px;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: padding-left 0.3s;
+        }
+        
+        .contact-link:hover {
+            padding-left: 5px;
+        }
+
+        .service-cta-banner {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-primary);
+            max-width: 900px; 
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: shimmer 8s infinite linear;
+        }
+        
+        .service-cta-banner h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .service-cta-banner p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        
+        .service-cta-banner .cta-button {
+            background-color: var(--white);
+            color: var(--primary-color);
+            box-shadow: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .service-cta-banner .cta-button:hover {
+            background-color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 9999;
+            transform: translateX(400px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .toast i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Workers Section */
+        #workers {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 8%;
+        }
+
+        .workers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .workers-grid-humans {
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
+        }
+
+        @media (max-width: 1024px) {
+            .workers-grid-humans {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .workers-grid,
+            .workers-grid-humans {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        .worker-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .worker-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .worker-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .worker-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .worker-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2.5rem;
+            color: var(--white);
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .worker-avatar::after {
+            content: '';
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: inherit;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .worker-avatar.ouvrier { background: linear-gradient(135deg, #FF5722, #E64A19); }
+        .worker-avatar.menuisier { background: linear-gradient(135deg, #8D6E63, #6D4C41); }
+        .worker-avatar.construction { background: linear-gradient(135deg, #607D8B, #455A64); }
+        .worker-avatar.livreur { background: linear-gradient(135deg, #FF9800, #F57C00); }
+        .worker-avatar.immobilier { background: linear-gradient(135deg, #9C27B0, #7B1FA2); }
+        .worker-avatar.eau { background: linear-gradient(135deg, #03A9F4, #0288D1); }
+        .worker-avatar.oustaz { background: linear-gradient(135deg, #4CAF50, #388E3C); }
+        .worker-avatar.plombier { background: linear-gradient(135deg, #00BCD4, #0097A7); }
+        .worker-avatar.traiteur { background: linear-gradient(135deg, #E91E63, #C2185B); }
+        .worker-avatar.electricien { background: linear-gradient(135deg, #FFC107, #FFA000); }
+        .worker-avatar.papaterie { background: linear-gradient(135deg, #795548, #5D4037); }
+        .worker-avatar.commercant { background: linear-gradient(135deg, #8BC34A, #689F38); }
+        .worker-avatar.menuisier-metal { background: linear-gradient(135deg, #607D8B, #455A64); }
+        .worker-avatar.frigoriste { background: linear-gradient(135deg, #00BCD4, #0097A7); }
+
+        /* Worker Card with Image */
+        .worker-card.with-image {
+            padding: 0;
+        }
+
+        .worker-card.with-image .image-wrapper {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            padding: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .worker-card.with-image .worker-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .worker-card.with-image .image-wrapper.dual-image {
+            flex-direction: column;
+            height: auto;
+            padding: 12px;
+            gap: 8px;
+        }
+
+        .worker-card.with-image .image-wrapper.dual-image .worker-image:first-child {
+            max-height: 130px;
+        }
+
+        .worker-card.with-image .image-wrapper.dual-image .worker-image:last-child {
+            max-height: 190px;
+        }
+
+        .worker-card.with-image .card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .worker-card h3 {
+            font-size: 1.4rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .worker-job {
+            display: inline-block;
+            background: var(--light-bg);
+            color: var(--primary-color);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .worker-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+            padding: 12px 28px;
+            border-radius: 50px;
+            background: var(--light-bg);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .worker-phone:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: scale(1.05);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 20px rgba(237, 41, 57, 0.3);
+        }
+
+        .worker-phone i {
+            color: var(--primary-color);
+            transition: color 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .worker-phone:hover i {
+            color: var(--white);
+        }
+
+        .worker-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 18px;
+            font-size: 0.85rem;
+            color: #4CAF50;
+            font-weight: 500;
+            background: rgba(76, 175, 80, 0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
+        .worker-status .dot {
+            width: 10px;
+            height: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 60px auto 40px;
+            max-width: 600px;
+            gap: 20px;
+        }
+
+        .section-divider::before,
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        }
+
+        .section-divider i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .sub-heading {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .sub-heading-desc {
+            text-align: center;
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Tab Buttons */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        .tab-btn {
+            padding: 10px 24px;
+            border-radius: 50px;
+            border: 2px solid var(--primary-color);
+            background: var(--white);
+            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover {
+            background: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        .tab-btn.active {
+            background: var(--primary-color);
+            color: var(--white);
+            box-shadow: var(--shadow-primary);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        #contact {
+            background-color: var(--light-bg);
+            padding-bottom: 100px; 
+            padding-top: 100px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr; 
+            gap: 40px;
+        }
+        
+        .info-cards-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-main-info {
+            background-color: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            height: 100%; 
+        }
+
+        .contact-main-info h2 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--primary-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .contact-item-block {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-item-block i {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-right: 15px;
+            margin-top: 3px;
+        }
+
+        .contact-item-block .info-text {
+             padding-top: 0px; 
+        }
+
+        .contact-item-block .info-text h4 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 2px;
+        }
+
+        .contact-item-block .info-text p {
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--secondary-color);
+        }
+        
+        .contact-item-block .info-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .map-container {
+            height: 600px; 
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: var(--light-text);
+            padding: 60px 8% 20px; 
+            font-size: 0.9rem;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            max-width: var(--max-width);
+            margin: 0 auto 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-col h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a, .footer-col p {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 300;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-brand .logo {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .footer-brand .logo i {
+            color: var(--primary-color);
+        }
+
+        .footer-brand p {
+            line-height: 1.6;
+        }
+
+        .footer-contact .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact .contact-item i {
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1rem;
+            margin-top: 3px;
+        }
+
+        .footer-contact p strong {
+            display: block;
+            color: var(--white);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            font-size: 0.8rem;
+        }
+
+        .footer-dev-info {
+            text-align: right;
+        }
+
+        .footer-dev-info a {
+            color: var(--light-text);
+            text-decoration: underline;
+        }
+        
+        .footer-dev-info a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Assistance Section */
+        #assistance {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 100px 8%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #assistance::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            z-index: 1;
+        }
+
+        #assistance .heading {
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .assistance-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: -40px auto 60px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        .assistance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 992px) {
+            .assistance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .assistance-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .assistance-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .assistance-card-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .assistance-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .assistance-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .assistance-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .assistance-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .assistance-card ul li i {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        .assistance-contact {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 60px auto 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(20px);
+        }
+
+        .assistance-contact h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .assistance-contact p {
+            opacity: 0.9;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .assistance-contact .cta-button {
+            background: var(--white);
+            color: var(--primary-color);
+            font-size: 1rem;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .assistance-contact .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 10px;
+            order: 2;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-toggle:hover {
+            background: rgba(237, 41, 57, 0.1);
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 1200px) {
+            .navbar {
+                padding: 15px 3%;
+            }
+            .logo {
+                font-size: 1.6rem;
+            }
+            .nav-links {
+                margin-right: 10px;
+            }
+            .nav-links a {
+                margin-left: 12px;
+                font-size: 0.85rem;
+            }
+            .header-cta-button {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .map-container {
+                height: 400px;
+            }
+            .contact-main-info {
+                height: auto; 
+            }
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-col:nth-child(2), .footer-col:nth-child(3) {
+                order: 3;
+            }
+            .footer-col:nth-child(4) {
+                order: 2;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .footer-bottom p {
+                margin-bottom: 10px;
+                order: 2;
+            }
+            .footer-dev-info {
+                text-align: center;
+                margin-top: 10px;
+                order: 1;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media (max-width: 950px) {
+            .heading {
+                font-size: 1.9rem;
+                margin-bottom: 40px;
+            }
+            section {
+                padding: 60px 5%; 
+            }
+            
+            .navbar {
+                padding: 15px 5%;
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                font-size: clamp(1.2rem, 5vw, 1.5rem);
+                order: 1;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--white);
+                flex-direction: column;
+                align-items: stretch;
+                padding: 80px 30px 30px;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+                transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 999;
+                margin-top: 0;
+                border-top: none;
+                border-radius: 0;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+                right: 0;
+            }
+
+            .nav-overlay {
+                position: fixed;
+                inset: 0;
+                background: rgba(0,0,0,0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+                z-index: 998;
+            }
+
+            .nav-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: stretch;
+                margin-right: 0;
+                width: 100%;
+            }
+            
+            .nav-links li {
+                margin-bottom: 5px;
+                text-align: left;
+            }
+
+            .nav-links a {
+                display: block;
+                margin: 0;
+                padding: 15px 0;
+                border-bottom: 1px solid var(--light-bg);
+                font-size: 1.1rem;
+            }
+
+            .nav-links a.active::after {
+                display: none;
+            }
+            
+            .header-cta-button {
+                order: 2;
+                margin-left: auto; 
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+
+            .nav-menu .header-cta-button {
+                margin: 20px 0 0;
+                text-align: center;
+                justify-content: center;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                order: 2;
+                margin-left: 10px;
+                z-index: 1001;
+            }
+
+            .mobile-menu-toggle.active {
+                color: var(--primary-color);
+            }
+            
+            #hero {
+                padding: 120px 5% 80px;
+                min-height: auto;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+                line-height: 1.2;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 30px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 25px;
+                margin-top: 40px;
+            }
+
+            .hero-stat .number {
+                font-size: 2rem;
+            }
+            
+            .hero-cta-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+            
+            .cta-button {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                padding: 14px 25px;
+            }
+
+            .service-card .img-container {
+                height: 200px;
+            }
+            
+            .service-cta-banner {
+                padding: 40px 25px;
+                border-radius: 16px;
+            }
+            
+            .service-cta-banner h3 {
+                font-size: 1.4rem;
+            }
+
+            .toast {
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                transform: translateY(100px);
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .footer-col:nth-child(4) {
+                order: 3;
+            }
+            .footer-col:nth-child(2) {
+                order: 2;
+            }
+            .footer-col:nth-child(3) {
+                order: 4;
+            }
+            .footer-col h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            section,
+            #features,
+            #workers,
+            #assistance,
+            #demarches,
+            footer {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            #hero {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            .navbar {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+            #contact {
+                padding-left: 4%;
+                padding-right: 4%;
+            }
+        }
+
+        /* ========================
+           SECTION DÉMARCHES ADMINISTRATIVES
+           ======================== */
+        #demarches {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+            padding: 100px 8%;
+        }
+
+        #demarches .heading {
+            color: #1a237e;
+        }
+
+        .demarches-intro {
+            text-align: center;
+            max-width: 750px;
+            margin: -40px auto 60px;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        /* Grille des catégories de documents */
+        .demarches-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .demarche-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: 0 6px 24px rgba(26, 35, 126, 0.08);
+            border: 1px solid rgba(26, 35, 126, 0.07);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demarche-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--demarche-color, linear-gradient(90deg, #3949AB, #5C6BC0));
+            border-radius: 20px 20px 0 0;
+        }
+
+        .demarche-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(26, 35, 126, 0.15);
+        }
+
+        .demarche-icon {
+            width: 65px;
+            height: 65px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            background: var(--demarche-bg, linear-gradient(135deg, #3949AB, #5C6BC0));
+            box-shadow: 0 6px 18px rgba(57, 73, 171, 0.3);
+        }
+
+        .demarche-card h3 {
+            font-size: 1.25rem;
+            color: #1a237e;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .demarche-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .demarche-card ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(26, 35, 126, 0.06);
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .demarche-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .demarche-card ul li i {
+            color: #3949AB;
+            font-size: 0.8rem;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        /* Bannière contact démarches */
+        .demarches-cta {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #3949AB 100%);
+            color: var(--white);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 15px 50px rgba(26, 35, 126, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demarches-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 60%);
+            animation: shimmer 10s infinite linear;
+        }
+
+        .demarches-cta h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .demarches-cta p {
+            opacity: 0.9;
+            font-size: 1rem;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .demarches-cta .cta-button {
+            background: var(--white);
+            color: #1a237e;
+            font-size: 1rem;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .demarches-cta .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .demarches-grid {
+                grid-template-columns: 1fr;
+            }
+            .demarches-cta {
+                padding: 35px 25px;
+            }
+            .demarches-cta h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="#hero" class="logo">
+                <i class="fa-solid fa-handshake" aria-hidden="true"></i> Dixième Services
+            </a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#workers">Professionnels</a></li>
+                    <li><a href="#services">Nos services</a></li>
+                    <li><a href="#demarches">Démarches Admin.</a></li>
+                    <li><a href="#assistance">Assistance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <a href="tel:+221772133398" class="header-cta-button">
+                    <i class="fa-solid fa-phone"></i> Appelez-nous
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Service disponible 24h/24 - 7j/7</span>
+            </div>
+            <h1>Ensemble trouvons la <span>solution</span></h1>
+            <p>
+                Dixième Services vous accompagne au quotidien avec une gamme complète de services de proximité.
+            </p>
+            <div class="hero-cta-buttons">
+                <a href="#workers" class="cta-button red">Voir les professionnels</a>
+                <a href="#contact" class="cta-button">
+                    <i class="fa-solid fa-phone"></i> Contactez-nous
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="number" data-count="6">0</span>
+                    <span class="label">Services proposés</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="number" data-count="24">0</span>
+                    <span class="label">Heures sur 24</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workers">
+        <h2 class="heading animate-on-scroll">Nos Professionnels du Quartier</h2>
+        <p style="text-align: center; max-width: 700px; margin: -40px auto 50px; color: #666; font-size: 1.1rem;">
+            Des experts de confiance disponibles 24h/24 pour tous vos besoins au Quartier Dixième
+        </p>
+        
+        <div class="tab-buttons">
+            <button class="tab-btn active" data-filter="all">Tous</button>
+            <button class="tab-btn" data-filter="btp">Bâtiment & Artisanat</button>
+            <button class="tab-btn" data-filter="livraison">Livraison</button>
+            <button class="tab-btn" data-filter="commerce">Commerce</button>
+            <button class="tab-btn" data-filter="services">Services</button>
+        </div>
+        
+        <div class="workers-grid workers-grid-humans">
+            <div class="worker-card animate-on-scroll stagger-1" data-category="btp">
+                <div class="worker-avatar ouvrier">
+                    <i class="fa-solid fa-person-digging"></i>
+                </div>
+                <h3>Ablaye Diallo</h3>
+                <span class="worker-job">Ouvrier BTP</span>
+                <a href="tel:+221778365231" class="worker-phone" onclick="showToast('Appel à Ablaye Diallo...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 836 52 31
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-2" data-category="btp">
+                <div class="worker-avatar menuisier">
+                    <i class="fa-solid fa-hammer"></i>
+                </div>
+                <h3>Aly Dieng</h3>
+                <span class="worker-job">Menuisier</span>
+                <a href="tel:+221775448213" class="worker-phone" onclick="showToast('Appel à Aly Dieng...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 544 82 13
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
+                <div class="worker-avatar construction">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <h3>Ada Fam</h3>
+                <span class="worker-job">BTP & Quincaillerie</span>
+                <a href="tel:+221775276967" class="worker-phone" onclick="showToast('Appel à Ada Fam...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 527 69 67
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-4" data-category="livraison">
+                <div class="worker-avatar livreur">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <h3>Amadou</h3>
+                <span class="worker-job">Livreur</span>
+                <a href="tel:+221773399144" class="worker-phone" onclick="showToast('Appel à Amadou...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 339 91 44
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-5" data-category="commerce">
+                <div class="worker-avatar immobilier">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <h3>Agence Immobilier</h3>
+                <span class="worker-job">Immobilier</span>
+                <a href="tel:+221774023079" class="worker-phone" onclick="showToast('Appel à l\'Agence...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 402 30 79
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-6" data-category="livraison">
+                <div class="worker-avatar livreur">
+                    <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <h3>Moussa Jakarta</h3>
+                <span class="worker-job">Livreur</span>
+                <a href="tel:+221773500665" class="worker-phone" onclick="showToast('Appel à Moussa Jakarta...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 350 06 65
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
+                <div class="worker-avatar eau">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h3>BARA</h3>
+                <span class="worker-job">Eau Filtrée</span>
+                <a href="tel:+221771420481" class="worker-phone" onclick="showToast('Appel à BARA Eau Filtrée...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 142 04 81
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-2" data-category="services">
+                <div class="worker-avatar oustaz">
+                    <i class="fa-solid fa-book-quran"></i>
+                </div>
+                <h3>Bocar Diallo</h3>
+                <span class="worker-job">Oustaz à Domicile</span>
+                <a href="tel:+221784000801" class="worker-phone" onclick="showToast('Appel à Bocar Diallo...')">
+                    <i class="fa-solid fa-phone"></i>
+                    78 400 08 01
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
+                <div class="worker-avatar plombier">
+                    <i class="fa-solid fa-faucet"></i>
+                </div>
+                <h3>Kao Soulay</h3>
+                <span class="worker-job">Plombier</span>
+                <a href="tel:+221770765473" class="worker-phone" onclick="showToast('Appel à Kao Soulay...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 076 54 73
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-4" data-category="services">
+                <div class="worker-avatar traiteur">
+                    <i class="fa-solid fa-utensils"></i>
+                </div>
+                <h3>Khadylaye</h3>
+                <span class="worker-job">Traiteur</span>
+                <a href="tel:+221772988075" class="worker-phone" onclick="showToast('Appel à Khadylaye...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 298 80 75
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
+                <div class="worker-avatar electricien">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Khalilou</h3>
+                <span class="worker-job">Electricien</span>
+                <a href="tel:+221773679313" class="worker-phone" onclick="showToast('Appel à Khalilou...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 367 93 13
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-6" data-category="commerce">
+                <div class="worker-avatar papaterie">
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <h3>Mamadou Ba</h3>
+                <span class="worker-job">Papeterie & Impression</span>
+                <a href="tel:+221775175432" class="worker-phone" onclick="showToast('Appel à Mamadou Ba...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 517 54 32
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
+                <div class="worker-avatar commercant">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                </div>
+                <h3>Mara Samb</h3>
+                <span class="worker-job">Commerçant (Mil, Maïs, Moulin)</span>
+                <a href="tel:+221775158090" class="worker-phone" onclick="showToast('Appel à Mara Samb...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 515 80 90
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-2" data-category="btp">
+                <div class="worker-avatar menuisier-metal">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+                <h3>Seydou Faye</h3>
+                <span class="worker-job">Menuisier Métallique</span>
+                <a href="tel:+221775761799" class="worker-phone" onclick="showToast('Appel à Seydou Faye...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 576 17 99
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-3" data-category="btp">
+                <div class="worker-avatar frigoriste">
+                    <i class="fa-solid fa-snowflake"></i>
+                </div>
+                <h3>Laye</h3>
+                <span class="worker-job">Frigoriste</span>
+                <a href="tel:+221775187352" class="worker-phone" onclick="showToast('Appel à Laye...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 518 73 52
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+
+            <div class="worker-card with-image animate-on-scroll stagger-1" data-category="commerce">
+                <div class="image-wrapper">
+                    <img src="a.jpeg" alt="Diamal Oud" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Diamal Oud</h3>
+                    <span class="worker-job">Parfumerie</span>
+                    <a href="tel:+221775110304" class="worker-phone" onclick="showToast('Appel à Diamal Oud...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 511 03 04
+                    </a>
+                    <div style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                        <p style="margin-bottom: 5px;"><i class="fa-brands fa-instagram" style="color: #E1306C; margin-right: 5px;"></i> parfumeriediamaloud</p>
+                        <p style="margin-bottom: 5px;"><i class="fa-brands fa-snapchat" style="color: #FFFC00; margin-right: 5px;"></i> diamal_oud</p>
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--primary-color); margin-right: 5px;"></i> Thiès HLM 10e</p>
+                    </div>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-5" data-category="commerce">
+                <div class="image-wrapper">
+                    <img src="b.jpeg" alt="Tima Boutique" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Tima Boutique</h3>
+                    <span class="worker-job">Boutique</span>
+                    <a href="tel:+221774582546" class="worker-phone" onclick="showToast('Appel à Tima Boutique...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 458 25 46
+                    </a>
+                    <div style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--primary-color); margin-right: 5px;"></i> Thiès HLM 10e</p>
+                    </div>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-6" data-category="commerce">
+                <div class="image-wrapper dual-image">
+                    <img src="j.jpeg" alt="Astar Shop - Logo" class="worker-image">
+                    <img src="i.jpeg" alt="Astar Shop - Pack Ravitaillement" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Astar Shop</h3>
+                    <span class="worker-job">Boutique Alimentation</span>
+                    <a href="tel:+221770928888" class="worker-phone" onclick="showToast('Appel à Astar Shop...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 092 88 88
+                    </a>
+                    <div style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                        <p style="margin-bottom: 5px;"><i class="fa-solid fa-user" style="color: var(--primary-color); margin-right: 5px;"></i> By Dykha</p>
+                        <p style="margin-bottom: 5px;"><i class="fa-brands fa-whatsapp" style="color: #25D366; margin-right: 5px;"></i> Commandes WhatsApp</p>
+                        <p><i class="fa-solid fa-truck" style="color: var(--primary-color); margin-right: 5px;"></i> Livraison possible</p>
+                    </div>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-7" data-category="commerce">
+                <div class="image-wrapper">
+                    <img src="c.jpeg" alt="Daba Business Shop" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Daba Fall</h3>
+                    <span class="worker-job">Business Shop</span>
+                    <a href="tel:+221775433774" class="worker-phone" onclick="showToast('Appel à Daba Fall...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 543 37 74
+                    </a>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-7" data-category="services">
+                <div class="image-wrapper">
+                    <img src="d.jpeg" alt="AGENCE SOPE SERIGNE BABACAR SY" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>AGENCE SOPE SERIGNE BABACAR SY</h3>
+                    <span class="worker-job">Organisation Assistance Séminaire</span>
+                    <a href="tel:+221772380209" class="worker-phone" onclick="showToast('Appel à AGENCE SOPE SERIGNE BABACAR SY...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 238 02 09
+                    </a>
+                    <a href="tel:+221339511492" class="worker-phone" onclick="showToast('Appel à AGENCE SOPE SERIGNE BABACAR SY...')" style="margin-top: 8px;">
+                        <i class="fa-solid fa-phone"></i>
+                        33 951 14 92
+                    </a>
+                    <a href="tel:+221765448181" class="worker-phone" onclick="showToast('Appel à AGENCE SOPE SERIGNE BABACAR SY...')" style="margin-top: 8px;">
+                        <i class="fa-solid fa-phone"></i>
+                        76 544 81 81
+                    </a>
+                    <div style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                        <p style="margin-bottom: 5px;">NINEA: 000433368 - RC: SN.THS.2000.A.1094</p>
+                        <p><i class="fa-solid fa-location-dot" style="color: var(--primary-color); margin-right: 5px;"></i> Hlm 10ème, Villa 82-Thiès</p>
+                    </div>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-1" data-category="services">
+                <div class="image-wrapper">
+                    <img src="e.jpeg" alt="Alamine Business Groupe" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Alamine Business Groupe</h3>
+                    <span class="worker-job">Traiteur & Organisation de Réceptions</span>
+                    <a href="tel:+221776511893" class="worker-phone" onclick="showToast('Appel à Alamine Business Groupe...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 651 18 93
+                    </a>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-4" data-category="btp">
+                <div class="worker-avatar electricien">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Ameth Diokhané</h3>
+                <span class="worker-job">Electricien</span>
+                <a href="tel:+221776587139" class="worker-phone" onclick="showToast('Appel à Ameth Diokhané...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 658 71 39
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
+                <div class="worker-avatar construction">
+                    <i class="fa-solid fa-border-all"></i>
+                </div>
+                <h3>Cheikh Sarr</h3>
+                <span class="worker-job">Carreleur</span>
+                <a href="tel:+221774179971" class="worker-phone" onclick="showToast('Appel à Cheikh Sarr...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 417 99 71
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-6" data-category="services">
+                <div class="worker-avatar livreur">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <h3>Ndiéguéne</h3>
+                <span class="worker-job">Lavage Véhicules &amp; Moto</span>
+                <a href="tel:+221775674729" class="worker-phone" onclick="showToast('Appel à Ndiéguéne Lavage...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 567 47 29
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-1" data-category="btp">
+                <div class="worker-avatar construction">
+                    <i class="fa-solid fa-hard-hat"></i>
+                </div>
+                <h3>Al Mountakha Travaux &amp; Services</h3>
+                <span class="worker-job">Construction &amp; Travaux Publics</span>
+                <a href="tel:+221777288504" class="worker-phone" onclick="showToast('Appel à Al Mountakha Travaux &amp; Services...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 728 85 04
+                </a>
+                <div style="margin-top: 15px; font-size: 0.85rem; color: #666;">
+                    <p style="margin-bottom: 5px;"><i class="fa-solid fa-user" style="color: var(--primary-color); margin-right: 5px;"></i> Abibou Ndiaye</p>
+                    <p style="margin-bottom: 5px;">Devis de construction</p>
+                    <p style="margin-bottom: 5px;">Pose de pavés</p>
+                    <p style="margin-bottom: 5px;">Bâtiments</p>
+                    <p style="margin-bottom: 5px;">Travaux publics</p>
+                    <p>Aménagements extérieurs</p>
+                </div>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card with-image animate-on-scroll stagger-2" data-category="services">
+                <div class="image-wrapper">
+                    <img src="f.jpeg" alt="JIGUEEN STYLE by NDF" class="worker-image">
+                </div>
+                <div class="card-body">
+                    <h3>Ndéye Fatou Niang</h3>
+                    <span class="worker-job">Salon de coiffure — JIGUEEN STYLE by NDF</span>
+                    <a href="tel:+221777622314" class="worker-phone" onclick="showToast('Appel à JIGUEEN STYLE by NDF...')">
+                        <i class="fa-solid fa-phone"></i>
+                        77 762 23 14
+                    </a>
+                    <div class="worker-status">
+                        <span class="dot"></span>
+                        Disponible
+                    </div>
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-3" data-category="services">
+                <div class="worker-avatar traiteur">
+                    <i class="fa-solid fa-scissors"></i>
+                </div>
+                <h3>Pape Touré</h3>
+                <span class="worker-job">Coiffeur</span>
+                <a href="tel:+221774487813" class="worker-phone" onclick="showToast('Appel à Pape Touré...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 448 78 13
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-4" data-category="commerce">
+                <div class="worker-avatar" style="background: linear-gradient(135deg, #795548, #4e342e);">
+                    <i class="fa-solid fa-cow"></i>
+                </div>
+                <h3>Ferme Khadim Rassoul</h3>
+                <span class="worker-job">Vente Poulets, Bœufs & Moutons</span>
+                <a href="tel:+221770979188" class="worker-phone" onclick="showToast('Appel à Ferme Khadim Rassoul...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 097 91 88
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-5" data-category="btp">
+                <div class="worker-avatar menuisier-metal">
+                    <i class="fa-solid fa-hammer"></i>
+                </div>
+                <h3>Darou Bayré Construction</h3>
+                <span class="worker-job">Menuiserie Métallique</span>
+                <a href="tel:+221775410378" class="worker-phone" onclick="showToast('Appel à Darou Bayré Construction...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 541 03 78
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-6" data-category="btp">
+                <div class="worker-avatar" style="background: linear-gradient(135deg, #1565C0, #0D47A1);">
+                    <i class="fa-solid fa-bore-hole"></i>
+                </div>
+                <h3>Entreprise Mini Forage</h3>
+                <span class="worker-job">Forages</span>
+                <a href="tel:+221773567118" class="worker-phone" onclick="showToast('Appel à Entreprise Mini Forage...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 356 71 18
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+
+            <div class="worker-card animate-on-scroll stagger-1" data-category="commerce">
+                <div class="worker-avatar" style="background: linear-gradient(135deg, #E91E63, #880E4F);">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Fall Business</h3>
+                <span class="worker-job">Assurance & Cosmétiques</span>
+                <a href="tel:+221779979969" class="worker-phone" onclick="showToast('Appel à Fall Business...')">
+                    <i class="fa-solid fa-phone"></i>
+                    77 997 99 69
+                </a>
+                <div class="worker-status">
+                    <span class="dot"></span>
+                    Disponible
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="heading animate-on-scroll">Nos Services pour Dixième</h2>
+        
+        <div class="services-grid">
+
+            <div class="service-card animate-on-scroll stagger-1">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=800&auto=format&fit=crop" alt="Pharmacie de garde">
+                    <div class="icon-overlay green"><i class="fa-solid fa-box-tissue"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Pharmacie de garde</h3>
+                    <p>Service de livraison de médicaments à domicile. Commandez vos médicaments et recevez-les rapidement chez vous.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card animate-on-scroll stagger-2">
+                <div class="img-container">
+                    <img src="https://keurcity.com/wp-content/uploads/2021/10/Location-bien-immobilier-Senegal.jpg" alt="Maison traditionnelle sénégalaise">
+                    <div class="icon-overlay purple"><i class="fa-solid fa-house-chimney"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Immobilier</h3>
+                    <p>Terrains et maisons à vendre dans le quartier. Trouvez la propriété de vos rêves avec notre accompagnement personnalisé.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card animate-on-scroll stagger-3">
+                <div class="img-container">
+                    <img src="https://images.pexels.com/photos/4391470/pexels-photo-4391470.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Livreur à moto">
+                    <div class="icon-overlay orange"><i class="fa-solid fa-motorcycle"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Livraison</h3>
+                    <p>Service de livraison rapide par moto. Vos colis livrés en un temps record partout dans le quartier et ses environs.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card animate-on-scroll stagger-4">
+                <div class="img-container">
+                    <img src="https://www.goafricaonline.com/uploads/media/default/0003/90/653676b8d05ec-Plombiers%20%C3%A0%20Dakar%20et%20au%20S%C3%A9n%C3%A9gal.jpg" alt="Plomberie">
+                    <div class="icon-overlay blue"><i class="fa-solid fa-faucet"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Plomberie</h3>
+                    <p>Intervention rapide pour toute fuite, réparation de chauffe-eau ou installation sanitaire dans votre domicile.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="service-card animate-on-scroll stagger-5">
+                <div class="img-container">
+                    <img src="https://www.meltecafrica.com/img/gallery/DSC_0525.JPG" alt="Électricité">
+                    <div class="icon-overlay yellow"><i class="fa-solid fa-bolt"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Électricité</h3>
+                    <p>Dépannage électrique, installation de prises, réparation de court-circuit et mise aux normes de votre installation.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="service-card animate-on-scroll stagger-6">
+                <div class="img-container">
+                    <img src="https://yiricar.com/wp-content/uploads/2024/02/FORD-FUSION-TITANIUM-1.jpg" alt="Location de Voiture">
+                    <div class="icon-overlay red-icon"><i class="fa-solid fa-car"></i></div>
+                </div>
+                <div class="card-content">
+                    <h3>Location de Voiture</h3>
+                    <p>Location de véhicules pour vos déplacements personnels ou professionnels à Thiès et ses environs.</p>
+                    <a href="tel:+221772133398" class="contact-link" onclick="showToast('Appel en cours...')">Contactez-nous <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section id="demarches">
+        <h2 class="heading animate-on-scroll">Démarches Administratives</h2>
+        <p class="demarches-intro animate-on-scroll">
+            Nous vous accompagnons dans l'obtention de vos documents officiels. Gagnez du temps et confiez-nous vos démarches administratives en toute sérénité.
+        </p>
+
+        <div class="demarches-grid">
+            <div class="demarche-card animate-on-scroll stagger-1" style="--demarche-color: linear-gradient(90deg, #1976D2, #42A5F5); --demarche-bg: linear-gradient(135deg, #1976D2, #42A5F5);">
+                <div class="demarche-icon">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <h3>État Civil & Famille</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i> Acte / Extrait de naissance</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Papiers de mariage</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Certificat de vie et d'entretien</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Certificat de décès</li>
+                </ul>
+            </div>
+
+            <div class="demarche-card animate-on-scroll stagger-2" style="--demarche-color: linear-gradient(90deg, #388E3C, #66BB6A); --demarche-bg: linear-gradient(135deg, #388E3C, #66BB6A);">
+                <div class="demarche-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3>Justice & Identité</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i> Extrait de casier judiciaire</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Certificat de nationalité</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Légalisation de documents</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Copie certifiée conforme</li>
+                </ul>
+            </div>
+
+            <div class="demarche-card animate-on-scroll stagger-3" style="--demarche-color: linear-gradient(90deg, #F57C00, #FFA726); --demarche-bg: linear-gradient(135deg, #F57C00, #FFA726);">
+                <div class="demarche-icon">
+                    <i class="fa-solid fa-house-user"></i>
+                </div>
+                <h3>Domicile & Résidence</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i> Certificat de résidence</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Certificat de domicile</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Attestation de logement</li>
+                </ul>
+            </div>
+
+            <div class="demarche-card animate-on-scroll stagger-4" style="--demarche-color: linear-gradient(90deg, #8E24AA, #AB47BC); --demarche-bg: linear-gradient(135deg, #8E24AA, #AB47BC);">
+                <div class="demarche-icon">
+                    <i class="fa-solid fa-stamp"></i>
+                </div>
+                <h3>Autorisations Diverses</h3>
+                <ul>
+                    <li><i class="fa-solid fa-chevron-right"></i> Autorisations administratives</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Permis de construire</li>
+                    <li><i class="fa-solid fa-chevron-right"></i> Demandes spécifiques</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="demarches-cta animate-on-scroll">
+            <h3>Besoin d'un document administratif ?</h3>
+            <p>Abdou Khadre se charge de toutes les démarches pour vous, de la constitution du dossier au retrait du document. Simple, rapide et efficace.</p>
+            <a href="tel:+221772133398" class="cta-button" onclick="showToast('Appel à Abdou Khadre en cours...')">
+                <i class="fa-solid fa-phone"></i>
+                Confier à Abdou Khadre
+            </a>
+        </div>
+    </section>
+
+    <section id="assistance">
+        <h2 class="heading animate-on-scroll">Assistance & Accompagnement</h2>
+        <p class="assistance-intro animate-on-scroll">
+            Dixième Services met à votre disposition des solutions concrètes pour l'éducation, la santé et le sport dans le quartier.
+        </p>
+
+        <div class="assistance-grid">
+            <div class="assistance-card animate-on-scroll stagger-1">
+                <div class="assistance-card-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3>Éducation</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Encadrement scolaire</li>
+                    <li><i class="fa-solid fa-check"></i> Élémentaire</li>
+                    <li><i class="fa-solid fa-check"></i> Secondaire / Collège</li>
+                    <li><i class="fa-solid fa-check"></i> Lycée</li>
+                    <li><i class="fa-solid fa-check"></i> Préparation aux concours</li>
+                </ul>
+            </div>
+
+            <div class="assistance-card animate-on-scroll stagger-2">
+                <div class="assistance-card-icon">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h3>Santé</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Visite à domicile</li>
+                    <li><i class="fa-solid fa-check"></i> Poste de santé</li>
+                    <li><i class="fa-solid fa-check"></i> Orientation hôpital</li>
+                    <li><i class="fa-solid fa-check"></i> Accompagnement médical</li>
+                </ul>
+            </div>
+
+            <div class="assistance-card animate-on-scroll stagger-3">
+                <div class="assistance-card-icon">
+                    <i class="fa-solid fa-person-running"></i>
+                </div>
+                <h3>Sportif</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Clubs sportifs</li>
+                    <li><i class="fa-solid fa-check"></i> Académie</li>
+                    <li><i class="fa-solid fa-check"></i> École de football</li>
+                    <li><i class="fa-solid fa-check"></i> Coach sportif</li>
+                    <li><i class="fa-solid fa-check"></i> Événements sportifs</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="assistance-contact animate-on-scroll">
+            <h3>Besoin d'aide ? Contactez le responsable</h3>
+            <p>Abdou Khadre est à votre écoute pour vous orienter vers les meilleures solutions.</p>
+            <a href="#contact" class="cta-button" onclick="showToast('Redirection vers contact...')">
+                <i class="fa-solid fa-phone"></i>
+                Contactez-nous
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="heading animate-on-scroll">Contactez-nous</h2>
+        <div class="contact-content">
+            
+            <div class="info-cards-wrapper">
+                
+                <div class="contact-main-info animate-on-scroll">
+                    <h2>Informations de contact</h2>
+                    
+                    <div class="contact-item-block">
+                        <i class="fa-solid fa-user"></i>
+                        <div class="info-text">
+                            <h4>Contacter le directeur</h4>
+                            <p>Abdou Khadre</p>
+                            <p>Responsable des services</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-block">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="info-text">
+                            <h4>Téléphone</h4>
+                            <p><a href="#contact">Contactez-nous</a></p>
+                            <p>Disponible 7j/7</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-block">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="info-text">
+                            <h4>Localisation</h4>
+                            <p>Dixième, Thiès, Sénégal</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item-block">
+                        <i class="fa-solid fa-clock"></i>
+                        <div class="info-text">
+                            <h4>Horaires</h4>
+                            <p>Lundi - Dimanche</p>
+                            <p>Service disponible 24h/24</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="map-container animate-on-scroll stagger-1">
+                <iframe 
+                    src="https://maps.google.com/maps?width=600&height=400&hl=en&q=Thiès, Dixième, Sénégal&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <p style="text-align: center; margin-top: 10px; color: var(--secondary-color); font-size: 0.9rem;">
+                    **IMPORTANT :** Pour une carte interactive et fonctionnelle, veuillez remplacer le code `src` de l'iframe ci-dessus par le code d'intégration que vous copierez directement depuis Google Maps pour "Thiès, Dixième".
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="features">
+        <h2 class="heading animate-on-scroll">Pourquoi nous choisir ?</h2>
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll stagger-1">
+                <div class="feature-icon red">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3>Rapide</h3>
+                <p>Intervention express dans les plus brefs délais. Votre temps est précieux, nous le respectons.</p>
+            </div>
+            <div class="feature-card animate-on-scroll stagger-2">
+                <div class="feature-icon green">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Fiable</h3>
+                <p>Des professionnels qualifiés et vérifiés à votre service. Qualité garantie sur toutes nos prestations.</p>
+            </div>
+            <div class="feature-card animate-on-scroll stagger-3">
+                <div class="feature-icon blue">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h3>Prix juste</h3>
+                <p>Des tarifs transparents et compétitifs. Pas de surprises, vous payez ce qui a été convenu.</p>
+            </div>
+            <div class="feature-card animate-on-scroll stagger-4">
+                <div class="feature-icon orange">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <h3>Disponible</h3>
+                <p>À votre écoute 24h/24 et 7j/7. Une urgence ? Nous sommes là pour vous, jour et nuit.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            
+            <div class="footer-col footer-brand">
+                <a href="#hero" class="logo">
+                    <i class="fa-solid fa-handshake" aria-hidden="true"></i> Dixième Services
+                </a>
+                <p>Dixième, nos services. Ensemble trouvant une solution pour tous vos besoins quotidiens.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#workers">Professionnels</a></li>
+                    <li><a href="#services">Nos services</a></li>
+                    <li><a href="#demarches">Démarches Admin.</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Nos services</h3>
+                <ul>
+                    <li><a href="#services">Plomberie</a></li>
+                    <li><a href="#services">Électricité</a></li>
+                    <li><a href="#services">Location de voiture</a></li>
+                    <li><a href="#services">Pharmacie de garde</a></li>
+                    <li><a href="#services">Immobilier</a></li>
+                    <li><a href="#services">Livraison</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col footer-contact">
+                <h3>Contact</h3>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-user"></i>
+                    <p><strong>Abdou Khadre</strong> Responsable des services</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p><a href="#contact">Contactez-nous</a></p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Dixième, Thiès, Sénégal</p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Dixième Services. Tous droits réservés.</p>
+            <div class="footer-dev-info">
+            Développé par Momar Diop <a href="mailto:momardiop091@gmail.com">momardiop091@gmail.com</a>
+                <span style="margin-left: 15px;">|</span>
+                Tél: +221 77 754 20 53
+            </div>
+        </div>
+    </footer>
+
+    <div class="nav-overlay"></div>
+
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-phone"></i>
+        <span id="toast-message">Appel en cours...</span>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const navOverlay = document.querySelector('.nav-overlay');
+        const navLinks = document.querySelectorAll('.nav-links a, .nav-menu .header-cta-button');
+
+        function openMenu() {
+            navMenu.classList.add('active');
+            navOverlay.classList.add('active');
+            menuToggle.classList.add('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            navOverlay.classList.remove('active');
+            menuToggle.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', () => {
+            if (navMenu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        navOverlay.addEventListener('click', closeMenu);
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinksAll = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinksAll.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.number[data-count]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    const duration = 2000;
+                    const step = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += step;
+                        if (current < target) {
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target + (target === 500 ? '+' : '');
+                        }
+                    };
+
+                    updateCounter();
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        counters.forEach(counter => counterObserver.observe(counter));
+
+        // Toast notification
+        let toastTimeout;
+        function showToast(message = 'Appel en cours...') {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Tab filtering
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                const category = this.dataset.filter;
+                document.querySelectorAll('.worker-card').forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Make showToast global for inline onclick handlers
+        window.showToast = showToast;
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+</html>
