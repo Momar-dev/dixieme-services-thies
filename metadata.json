@@ -1,0 +1,6 @@
+{
+  "name": "Dixième Services",
+  "description": "Plateforme officielle des services et professionnels du Quartier Dixième à Thiès : Artisans BTP, Livraison express, Commerces de proximité, Démarches administratives, Pharmacie et Santé.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

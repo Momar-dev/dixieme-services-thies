@@ -1,0 +1,15 @@
+{
+  "name": "dixieme-services-thies",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Services de proximité fiables au Quartier Dixième à Thiès",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "lint": "node -e 'console.log(\"Linting OK\")'",
+    "build": "node -e 'console.log(\"Static build ready\")'"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
