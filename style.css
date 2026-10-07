@@ -4,14 +4,20 @@
    ========================================================================== */
 
 :root {
-    /* Brand Colors - Vibrant Senegalese Ruby & Graphite */
-    --primary-color: #E11D48;
-    --primary-hover: #BE123C;
-    --primary-dark: #9F1239;
-    --primary-light: #FFE4E6;
-    --primary-subtle: #FFF1F2;
-    --primary-glow: rgba(225, 29, 72, 0.28);
-    --primary-gradient: linear-gradient(135deg, #E11D48 0%, #BE123C 60%, #881337 100%);
+    /* Brand Colors - Édition Titane Grenadine (Inspiration Deep Ruby iPhone) */
+    --primary-color: #B9173E;
+    --primary-hover: #981032;
+    --primary-dark: #740B25;
+    --primary-deep: #4A0618;
+    --primary-light: #FDE8ED;
+    --primary-subtle: #FFF2F5;
+    --primary-glow: rgba(185, 23, 62, 0.28);
+    --primary-glow-intense: rgba(185, 23, 62, 0.45);
+    --primary-gradient: linear-gradient(135deg, #CF1B47 0%, #A81438 48%, #740B25 100%);
+    --grenadine-titanium: linear-gradient(135deg, #C41843 0%, #950F30 55%, #680920 100%);
+    --grenadine-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.05) 55%, rgba(0, 0, 0, 0.06) 100%);
+    --grenadine-cluster-sheen: radial-gradient(circle, rgba(185, 23, 62, 0.14) 0%, rgba(185, 23, 62, 0) 70%);
+    --card-border-hover: rgba(185, 23, 62, 0.28);
     
     /* Secondary & Neutrals */
     --slate-950: #090D16;
@@ -105,27 +111,34 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #E11D48 0%, #BE123C 100%);
+    background: linear-gradient(180deg, #CF1B47 0%, #A81438 60%, #740B25 100%);
     border-radius: var(--radius-full);
-    border: 3px solid #F8FAFC;
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+    border: 3px solid #FDF8F9;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.15);
     transition: background var(--transition-fast);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #F43F5E 0%, #E11D48 100%);
-    border-color: #F1F5F9;
+    background: linear-gradient(180deg, #DE2052 0%, #B9173E 100%);
+    border-color: #F8FAFC;
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background: #9F1239;
+    background: #680920;
 }
 
 body {
     font-family: 'Plus Jakarta Sans', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.65;
     color: var(--text-body);
-    background-color: var(--bg-page);
+    background-color: #FBF8F9;
+    /* Subliminal cluster seed tessellation pattern (grappe & rassemblement des grains de grenadine) */
+    background-image: 
+        radial-gradient(circle at 10% 12%, rgba(185, 23, 62, 0.038) 0%, transparent 42%),
+        radial-gradient(circle at 90% 68%, rgba(185, 23, 62, 0.032) 0%, transparent 45%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B9173E' stroke-width='0.65' stroke-opacity='0.045'%3E%3Cpath d='M28 8 L42 16 L42 34 L28 42 L14 34 L14 16 Z' fill='%23B9173E' fill-opacity='0.012'/%3E%3Ccircle cx='28' cy='25' r='2.8' fill='%23B9173E' fill-opacity='0.03'/%3E%3Cpath d='M0 8 L14 16 L14 34 L0 42 L-14 34 L-14 16 Z' fill='%23B9173E' fill-opacity='0.008'/%3E%3Cpath d='M56 8 L70 16 L70 34 L56 42 L42 34 L42 16 Z' fill='%23B9173E' fill-opacity='0.008'/%3E%3Cpath d='M28 42 L42 50 L42 68 L28 76 L14 68 L14 50 Z' fill='%23B9173E' fill-opacity='0.008'/%3E%3Ccircle cx='0' cy='25' r='1.8' fill='%23B9173E' fill-opacity='0.02'/%3E%3Ccircle cx='56' cy='25' r='1.8' fill='%23B9173E' fill-opacity='0.02'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-repeat: repeat;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -368,21 +381,22 @@ header.scrolled {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: var(--primary-color);
+    background: var(--grenadine-titanium);
     color: var(--white);
     padding: 10px 20px;
     border-radius: var(--radius-full);
     font-size: 0.9rem;
     font-weight: 700;
-    box-shadow: var(--shadow-primary);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 8px 20px -3px var(--primary-glow);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: all var(--transition-fast);
     white-space: nowrap;
 }
 
 .header-cta-button:hover {
-    background: var(--primary-hover);
+    background: linear-gradient(135deg, #CF1B47 0%, #981032 60%, #680920 100%);
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px -4px var(--primary-glow);
+    box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.45), 0 14px 28px -4px var(--primary-glow);
 }
 
 .mobile-menu-toggle {
@@ -402,10 +416,17 @@ header.scrolled {
 
 #hero {
     padding: clamp(65px, 9vw, 110px) clamp(16px, 5vw, 32px) clamp(55px, 7vw, 90px);
-    background: radial-gradient(circle at 80% 20%, rgba(225, 29, 72, 0.08) 0%, transparent 60%),
-                radial-gradient(circle at 10% 80%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-                linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-    border-bottom: 1px solid var(--slate-200);
+    /* Multi-aril cluster glow (Grappe lumineuse grenadine & reflets nectar iPhone) */
+    background: 
+        radial-gradient(circle at 76% 18%, rgba(185, 23, 62, 0.14) 0%, transparent 40%),
+        radial-gradient(circle at 84% 25%, rgba(207, 27, 71, 0.10) 0%, transparent 32%),
+        radial-gradient(circle at 70% 28%, rgba(141, 15, 46, 0.08) 0%, transparent 36%),
+        radial-gradient(circle at 78% 34%, rgba(185, 23, 62, 0.07) 0%, transparent 28%),
+        radial-gradient(circle at 18% 72%, rgba(185, 23, 62, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 25% 80%, rgba(207, 27, 71, 0.06) 0%, transparent 35%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23B9173E' stroke-width='0.65' stroke-opacity='0.05'%3E%3Cpath d='M30 10 L45 18 L45 38 L30 46 L15 38 L15 18 Z' fill='%23B9173E' fill-opacity='0.012'/%3E%3Ccircle cx='30' cy='28' r='3' fill='%23B9173E' fill-opacity='0.035'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(180deg, #FFFFFF 0%, #FFF7F9 45%, #FBF8F9 100%);
+    border-bottom: 1px solid rgba(185, 23, 62, 0.12);
     position: relative;
     overflow: hidden;
 }
@@ -455,9 +476,11 @@ header.scrolled {
 }
 
 #hero h1 span.highlight-hero {
-    color: var(--primary-color);
     position: relative;
     display: inline-block;
+    background: linear-gradient(135deg, #DE2052 0%, #B9173E 55%, #740B25 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #hero h1 span.highlight-hero::after {
@@ -467,7 +490,7 @@ header.scrolled {
     left: 0;
     width: 100%;
     height: 8px;
-    background: rgba(225, 29, 72, 0.15);
+    background: rgba(185, 23, 62, 0.15);
     border-radius: 4px;
     z-index: -1;
 }
@@ -506,15 +529,30 @@ header.scrolled {
 }
 
 .cta-button.red {
-    background: var(--primary-color);
+    background: var(--grenadine-titanium);
     color: var(--white);
-    box-shadow: var(--shadow-primary);
+    box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.4), 0 10px 24px -4px var(--primary-glow);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button.red::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    border-radius: var(--radius-full) var(--radius-full) 0 0;
 }
 
 .cta-button.red:hover {
-    background: var(--primary-hover);
+    background: linear-gradient(135deg, #CF1B47 0%, #981032 60%, #680920 100%);
     transform: translateY(-2px);
-    box-shadow: 0 16px 32px -4px var(--primary-glow);
+    box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.45), 0 16px 32px -4px var(--primary-glow);
 }
 
 .cta-button.secondary {
@@ -860,6 +898,12 @@ header.scrolled {
 .worker-avatar.commercant { background: linear-gradient(135deg, #65a30d, #3f6212); }
 .worker-avatar.menuisier-metal { background: linear-gradient(135deg, #475569, #1e293b); }
 .worker-avatar.frigoriste { background: linear-gradient(135deg, #0284c7, #0f766e); }
+.worker-avatar.multiservice { background: linear-gradient(135deg, #0284c7, #2563eb); }
+.worker-avatar.ustensiles { background: linear-gradient(135deg, #ea580c, #c2410c); }
+.worker-avatar.restauratrice { background: linear-gradient(135deg, #e11d48, #be123c); }
+.worker-avatar.enfants { background: linear-gradient(135deg, #ec4899, #8b5cf6); }
+.worker-avatar.ingenieur { background: linear-gradient(135deg, #0284c7, #1e40af); }
+.worker-avatar.gp { background: linear-gradient(135deg, #1e40af, #0284c7); }
 
 .avatar-live-indicator {
     position: absolute;
@@ -2121,11 +2165,17 @@ header.scrolled {
    ========================================================================== */
 
 footer {
-    background-color: var(--footer-bg);
+    background-color: #0B0407;
+    background-image: 
+        radial-gradient(circle at 82% 16%, rgba(185, 23, 62, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 18% 84%, rgba(185, 23, 62, 0.09) 0%, transparent 48%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23B9173E' stroke-width='0.6' stroke-opacity='0.08'%3E%3Cpath d='M28 8 L42 16 L42 34 L28 42 L14 34 L14 16 Z' fill='%23B9173E' fill-opacity='0.015'/%3E%3Ccircle cx='28' cy='25' r='2.5' fill='%23B9173E' fill-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
     color: var(--slate-400);
     padding: clamp(60px, 8vw, 85px) clamp(16px, 5vw, 32px) clamp(95px, 12vw, 125px);
     font-size: 0.9rem;
-    border-top: 1px solid #1E293B;
+    border-top: 1px solid rgba(185, 23, 62, 0.22);
+    position: relative;
+    overflow: hidden;
 }
 
 .footer-main {
